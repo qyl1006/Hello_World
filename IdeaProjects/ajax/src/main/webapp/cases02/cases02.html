@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>列表移动</title>
+<script type="text/javascript" src="/cases02/select.js"></script>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<td>
+				<select id="s1" style="width:100px;" size="10" multiple="multiple" >
+					<option selected="selected">选项1</option>
+					<option>选项2</option>
+					<option>选项3</option>
+					<option>选项4</option>
+					<option>选项5</option>
+					<option>选项6</option>
+					<option>选项7</option>
+					<option>选项8</option>
+					<option>选项9</option>
+				</select>
+			</td>
+			<td align="center">
+				<input type="button" value="==>" onclick="moveAll('s1', 's2')"/><br/>
+				<input type="button" value="-->" onclick="moveSelected('s1', 's2')"/><br/>
+				<input type="button" value="<--" onclick="moveSelected('s2', 's1')"/><br/>
+				<input type="button" value="<==" onclick="moveAll('s2', 's1')"/>
+			</td>
+			<td>
+				<select id="s2" style="width:100px;" size="10" multiple="multiple" >
+				</select>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

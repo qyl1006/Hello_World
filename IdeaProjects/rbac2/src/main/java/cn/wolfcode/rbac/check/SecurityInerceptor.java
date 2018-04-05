@@ -20,8 +20,8 @@ public class SecurityInerceptor extends HandlerInterceptorAdapter {
             throws Exception {
 
         HttpSession session = request.getSession();
+        //得到当前用户信息
         Employee emp = (Employee) session.getAttribute("emp_in_session");
-//        Employee emp = (Employee) session.getAttribute("exps_in_session");
 
 
         //超级管理员

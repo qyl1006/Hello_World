@@ -20,7 +20,7 @@
             http://www.springframework.org/schema/aop
             http://www.springframework.org/schema/aop/spring-aop.xsd ">
 
-
+    <!--mvc注解驱动器-->
     <mvc:annotation-driven/>
 
     <!--组件扫描器-->
