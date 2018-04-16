@@ -20,9 +20,15 @@
 			<option value="5">5</option>
 			<option value="10">10</option>
 		</select>
+
+		<%--页面容量回显--%>
 		<script type="text/javascript">
-            $(".pageSize option[value='${qo.pageSize}']").prop("selected",true);
-        </script>
+			$(function () {
+				$(".pageSize option[value='${result.pageSize}']").prop("selected", true);
+            });
+		</script>
+
+
 		转到第<input type="number" name="currentPage" value="${qo.currentPage}" class="ui_input_txt01" min="1" style="width:50px;"/>
 			 <input type="button" class="ui_input_btn01 btn_page" value="跳转"/>
 	</div>

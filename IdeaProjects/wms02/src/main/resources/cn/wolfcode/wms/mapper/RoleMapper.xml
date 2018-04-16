@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.wolfcode.wms.mapper.RoleMapper">
+  <resultMap id="BaseResultMap" type="cn.wolfcode.wms.domain.Role">
+    <id column="id" property="id" />
+    <result column="name" property="name" />
+    <result column="sn" property="sn" />
+
+    <!--查权限-->
+    <collection property="permissions" column="id" ofType="permission"
+                select="cn.wolfcode.wms.mapper.PermissionMapper.selectByRoleId"/>
+
+
+    <!--查菜单-->
+    <collection property="systemmenus" column="id" ofType="systemmenu"
+                select="cn.wolfcode.wms.mapper.SystemmenuMapper.selectByRoleId"/>
+  </resultMap>
+
+
+
+  <delete id="deleteByPrimaryKey">
+    delete from role
+    where id = #{id}
+  </delete>
+
+  <delete id="deleteRelation">
+    delete from role_permission where role_id = #{id}
+
+  </delete>
+  <delete id="deleteRelationByMenu">
+    delete from role_menu where role_id = #{id}
+  </delete>
+  <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+    insert into role (name, sn)
+    values (#{name}, #{sn})
+  </insert>
+
+  <!--维护关系-->
+  <insert id="insertRelation">
+      insert into role_permission (role_id, permission_id)
+        values (#{roleId}, #{permissionId})
+  </insert>
+  <insert id="insertRelationByMenu">
+      insert into role_menu (role_id, menu_id) values (#{roleId}, #{menuId})
+  </insert>
+  <update id="updateByPrimaryKey">
+    update role
+    set name = #{name},
+      sn = #{sn}
+    where id = #{id}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap">
+    select id, name, sn
+    from role
+    where id = #{id}
+  </select>
+  <select id="selectAll" resultType="role">
+    select id, name, sn
+    from role
+  </select>
+
+
+  <!--分页-->
+  <select id="queryCount" resultType="int" parameterType="cn.wolfcode.wms.query.QueryObject">
+    select count(*) from role
+  </select>
+  <select id="queryAll" resultType="role" parameterType="cn.wolfcode.wms.query.QueryObject">
+    select id, name, sn from role
+    limit #{start},#{pageSize}
+  </select>
+
+  <select id="selectByEmployeeId" resultType="role">
+    select id, name, sn from role where id in (
+      select role_id from employee_role
+        where employee_id = #{employeeId}
+    )
+  </select>
+</mapper>

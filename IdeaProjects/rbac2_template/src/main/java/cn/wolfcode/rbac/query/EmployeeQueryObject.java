@@ -8,7 +8,7 @@ public class EmployeeQueryObject extends QueryObject {
     private String keyword;
     private Integer deptId = -1;
 
-    public String getKeyWord(){
+    public String getKeyword(){
         return empy2Null(keyword);
     }
 

@@ -1,0 +1,6 @@
+[
+  {"id":4,"pId":1,"name":"部门管理","action":"department"},
+  {"id":5,"pId":1,"name":"员工管理","action":"employee"},
+  {"id":6,"pId":1,"name":"权限管理","action":"permission"},
+  {"id":7,"pId":1,"name":"角色管理","action":"role"}
+]

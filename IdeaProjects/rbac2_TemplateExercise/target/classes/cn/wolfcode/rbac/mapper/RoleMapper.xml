@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+    <mapper namespace="cn.wolfcode.rbac.mapper.RoleMapper">
+
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true" parameterType="role">
+        insert into role (name, sn) values (#{name}, #{sn})
+    </insert>
+
+    <!--//维护角色与权限的外键关系-->
+    <insert id="insertRelation">
+        insert role_permission (role_id, permission_id) values (#{roleId}, #{permissionId})
+    </insert>
+
+        <update id="updateByKey" parameterType="role">
+        update role set name = #{name}, sn = #{sn} where id = #{id}
+    </update>
+    <delete id="deleteById">
+        delete from role where id = #{id}
+    </delete>
+
+    <!--删除旧的关系  删除中间表的数据-->
+    <delete id="deleteRelation">
+        delete from role_permission where role_id = #{roleId}
+    </delete>
+
+        <resultMap id="base_map" type="role">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="sn" property="sn"/>
+        <collection property="permissions" column="id"
+                    ofType="permission"
+                    select="cn.wolfcode.rbac.mapper.PermissionMapper.selectByRoleId"/>
+    </resultMap>
+    <select id="getById" resultMap="base_map">
+        select id, name, sn from role where id = #{id}
+    </select>
+
+
+    <select id="queryCount" resultType="_int" parameterType="cn.wolfcode.rbac.query.QueryObject">
+        select count(*) from role
+    </select>
+    <select id="queryAll" resultType="role" parameterType="cn.wolfcode.rbac.query.QueryObject">
+        select id, name, sn from role limit #{start}, #{pageSize}
+    </select>
+
+    <!--查询所有,给部门使用-->
+    <select id="listAll" resultType="role">
+        select id, name, sn from role
+    </select>
+
+    <!--根据Employee的id查询对应的-->
+    <select id="selectByEmployeeId" resultType="role">
+        select id, name, sn from role where id in (
+            select role_id from employee_role where employee_id = #{employeeId}
+        )
+    </select>
+</mapper>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+    <mapper namespace="cn.wolfcode.rbac.mapper.EmployeeMapper">
+
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true" parameterType="employee">
+        insert into employee (name, password, email, age, admin, dept_id) values
+              (#{name}, #{password}, #{email}, #{age}, #{admin}, #{dept.id})
+    </insert>
+
+    <!--最后发额外的sql语句  维护外键关系-->
+    <insert id="insertRelation">
+        insert employee_role (employee_id, role_id) values (#{employeeId}, #{roleId})
+    </insert>
+
+        <update id="updateByKey" parameterType="employee">
+        update employee set name = #{name}, email = #{email}, age = #{age}, admin = #{admin},
+              dept_id = #{dept.id} where id = #{id}
+    </update>
+
+    <delete id="deleteById">
+        delete from employee where id = #{id}
+    </delete>
+
+    <!--更新前, 删除中间表关系-->
+    <delete id="deleteRelation">
+        delete from employee_role where employee_id = #{employeeId}
+    </delete>
+
+
+    <resultMap id="role_map" type="employee">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="email" property="email"/>
+        <result column="age" property="age"/>
+        <result column="admin" property="admin"/>
+        <collection property="roles" column="id"
+                    ofType="role"
+                    select="cn.wolfcode.rbac.mapper.RoleMapper.selectByEmployeeId"/>
+    </resultMap>
+    <select id="getById" resultMap="role_map">
+        select id, name, email, age, admin from employee where id = #{id}
+    </select>
+
+
+    <sql id="base_colunm">
+        select
+            e.id, e.name, e.email, e.age, e.admin, e.dept_id, d.id d_id, d.name d_name
+
+    </sql>
+    <sql id="base_table">
+         from
+            employee e left join department d on e.dept_id = d.id
+    </sql>
+    <sql id="base_where">
+        <where>
+            <if test="keyword != null">
+                and e.name like concat('%', #{keyword} ,'%') OR
+                    e.email like concat('%', #{keyword} ,'%')
+            </if>
+            <if test="deptId > 0">
+                and e.dept_id = #{deptId}
+            </if>
+        </where>
+    </sql>
+
+    <select id="queryCount" resultType="_int" parameterType="cn.wolfcode.rbac.query.EmployeeQueryObject">
+        select count(*) from employee e
+            <include refid="base_where"/>
+    </select>
+
+    <resultMap id="base_map" type="employee">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="email" property="email"/>
+        <result column="age" property="age"/>
+        <result column="admin" property="admin"/>
+
+        <association property="dept" column="dept_id" javaType="department" columnPrefix="d_">
+            <id column="id" property="id"/>
+            <result column="name" property="name"/>
+            <result column="sn" property="sn"/>
+        </association>
+    </resultMap>
+    <select id="queryAll" resultMap="base_map" parameterType="cn.wolfcode.rbac.query.EmployeeQueryObject">
+        <include refid="base_colunm"/>
+        <include refid="base_table"/>
+        <include refid="base_where"/>
+          limit #{start}, #{pageSize}
+    </select>
+
+    <!--//查询数据库  验证登陆信息-->
+    <select id="selectEmployeeByInfo" resultType="employee">
+        select id, name, email, age, admin from employee
+          where name = #{username} and password = #{password}
+    </select>
+
+
+</mapper>

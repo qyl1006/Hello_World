@@ -10,6 +10,7 @@ import cn.wolfcode.rbac.util.RequiredPermission;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -25,7 +26,7 @@ public class EmployeeController {
     private IRoleService roleService;
 
     @RequestMapping("list")
-    public String list(EmployeeQueryObject qo, Model model){
+    public String list(@ModelAttribute("qo") EmployeeQueryObject qo, Model model){
         PageResult results = employeeService.queryAll(qo);
         model.addAttribute("result", results);
         model.addAttribute("depts",departmentService.list());
@@ -46,7 +47,7 @@ public class EmployeeController {
 
     @RequestMapping("saveOrUpdate")
     public String saveOrUpdate(Employee entity, Long[] roleIds){
-        employeeService.saveOrUpdate(entity, roleIds);
+//        employeeService.saveOrUpdate(entity, roleIds);
         return "redirect:/employee/list.do";
     }
 

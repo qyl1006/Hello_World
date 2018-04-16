@@ -72,10 +72,10 @@ public class PermissionServiceImpl implements IPermissionService {
         }
     }
 
-    //   11
     @Override
     public List<Permission> listAll() {
         return permissionMapper.listAll();
-    }
+    }   //   11
+
 
 }

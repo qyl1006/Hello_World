@@ -12,7 +12,7 @@
 	<script src="/js/plugins/artDialog/jquery.artDialog.js?skin=blue"></script>
 	<script type="text/javascript" src="/js/plugins/jquery-validation-1.8.1/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="/js/plugins/jquery-validation-1.8.1/localization/messages_cn.js"></script>
-	<script type="text/javascript" src="/js/system/employee.js"></script>
+	<%--<script type="text/javascript" src="/js/system/employee.js"></script>--%>
 </head>
 <body>
 <form name="editForm" action="/employee/saveOrUpdate.do" method="post" id="editForm">
@@ -70,6 +70,78 @@
 						</select>
 					</td>
 				</tr>
+
+
+		<script type="text/javascript">
+			$(function () {
+				//去重复
+				$(function () {
+				    //右边
+					$(".selected_roles option").each(function (index, ele) {
+                        //左边
+						$(".all_roles option").each(function (i,e) {
+                            //找出重复的并删除
+                            if(ele.value == e.value){
+							    $(e).remove();
+							}
+                        })
+                    });
+                });
+
+
+
+				//全部右移动
+				$("#selectAll").click(function () {
+					$(".all_roles option").appendTo(".selected_roles");
+                });
+
+                //全部左移动
+                $("#deselectAll").click(function () {
+                    $(".selected_roles option").appendTo(".all_roles");
+                });
+
+                //单个右移动
+                $("#select").click(function () {
+                    $(".all_roles option:selected").appendTo(".selected_roles");
+                });
+
+                //单个左移动
+                $("#deselect").click(function () {
+                    $(".selected_roles option:selected").appendTo(".all_roles");
+                });
+
+
+				//保存操作之前的默认选中
+				// $(".ui_input_btn01").click(function () {
+                 //    $(".selected_roles option").prop("selected", true);
+                // });
+
+				$("#editForm").submit(function () {
+                    $(".selected_roles option").prop("selected", true);
+                });
+
+
+				//超级管理员 默认勾选
+				var det = null;
+                if($(".ui_checkbox01").prop("checked")){
+                    det = $(".role").detach();
+				}
+
+                //勾选超级管理员 -- 权限选择界面消失
+
+				$(".ui_checkbox01").click(function () {
+                    if(this.checked){
+                        det = $(".role").detach();
+					}else {
+                        var tr = $(this).parents("tr").after(det)
+					}
+                });
+            })
+
+
+
+		</script>
+
 				<tr>
 					<td class="ui_text_rt" width="140">超级管理员</td>
 					<td class="ui_text_lt">

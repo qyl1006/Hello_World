@@ -33,11 +33,15 @@
 									<option value="${item.id}">${item.name}</option>
 								</c:forEach>
 							</select>
+
+							<%--搜索查询部门的回显--%>
 							<script type="text/javascript">
-								$(function() {
-									$("#deptId option[value='${qo.deptId}']").prop("selected", true);
-								});
+								$(function () {
+									$("#deptId option[value='"+ ${qo.deptId}+"']").prop("selected", true);
+                                });
 							</script>
+
+
 							<input type="button" value="查询" class="ui_input_btn01 btn_page"
 								data-page="1" />
 						</div>

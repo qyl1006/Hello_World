@@ -25,27 +25,42 @@ $(function() {
 });
 
 /** 翻页操作 */
-$(function() {
-	// 翻页操作
-	$(".btn_page").click(function() {
-		// 获取data-page属性的值
-		var pageNo = $(this).data("page")
-				|| $(":input[name='currentPage']").val();
-		$(":input[name='currentPage']").val(pageNo);
+$(function () {
+	$(".btn_page").click(function () {
+		//获取每次按钮操作的当前页的值
+		var currentPage = $(this).data("page") || $("input[name='currentPage']").val();
+		//设置值
+		$("input[name='currentPage']").val(currentPage);
+		//提交表单
 		$("#searchForm").submit();
-	});
-	// 设置每页显示多少条数据:改变ageSize
-	$(":input[name='pageSize']").change(function() {
-		$(":input[name='currentPage']").val(1);
-		$("#searchForm").submit();
-	});
-});
-/** 点击,跳转到指定URL */
-$(function() {
-	$(".btn_redirect").click(function() {
-		location.href = $(this).data("url");
-	});
-});
+
+    });
+
+    //页面容量改变时,自动提交表单
+	$(".pageSize[name='pageSize']").change(function () {
+        //提交表单
+        $("#searchForm").submit();
+    });
+
+
+
+    /** 点击,跳转到指定URL */
+    $("#box_bottom input").click(function () {
+    	var url = $(this).data("url");
+    	location.href = url;
+     });
+
+})
+
+
+
+
+
+
+
+
+
+
 
 /** 确定删除的对话框 */
 $(function() {
@@ -62,6 +77,8 @@ $(function() {
 		});
 	});
 });
+
+
 // 对话框
 function showDialog(content, ok, cancel) {
 	$.dialog({

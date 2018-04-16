@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.wolfcode.wms.mapper.OrderBillMapper">
+  <resultMap id="BaseResultMap" type="cn.wolfcode.wms.domain.OrderBill">
+    <id column="id" property="id" />
+    <result column="sn" property="sn" />
+    <result column="vdate" property="vdate" />
+    <result column="status" property="status" />
+    <result column="totalAmount" property="totalAmount" />
+    <result column="totalNumber" property="totalNumber" />
+
+    <result column="auditTime" property="auditTime" />
+    <result column="inputTime" property="inputTime" />
+
+    <!--录入人-->
+    <association property="inputUser" column="inputUser_id" columnPrefix="iu_" javaType="employee">
+      <id column="id" property="id"/>
+      <result column="name" property="name"/>
+    </association>
+    <!--审核人-->
+    <collection property="auditor" column="auditor_id" columnPrefix="at_" javaType="employee">
+      <id column="id" property="id"/>
+      <result column="name" property="name"/>
+    </collection>
+    <!--供应商-->
+    <collection property="supplier" column="supplier_id" columnPrefix="s_" javaType="supplier">
+      <id column="id" property="id"/>
+      <result column="name" property="name"/>
+    </collection>
+
+  </resultMap>
+  <delete id="deleteByPrimaryKey">
+    delete from orderbill
+    where id = #{id}
+  </delete>
+  <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+    insert into orderbill (sn, vdate, status, totalAmount, totalNumber, auditTime, 
+      inputTime, inputUser_id, auditor_id, supplier_id)
+    values (#{sn}, #{vdate}, #{status}, #{totalAmount}, #{totalNumber}, #{auditTime}, 
+      #{inputTime}, #{inputUser.id}, #{auditor.id}, #{supplier.id})
+  </insert>
+  <update id="updateByPrimaryKey">
+    update orderbill
+    set sn = #{sn},
+      vdate = #{vdate},
+      status = #{status},
+      totalAmount = #{totalAmount},
+      totalNumber = #{totalNumber},
+      auditTime = #{auditTime},
+      inputTime = #{inputTime},
+      inputUser_id = #{inputUser.id},
+      auditor_id = #{auditor.id},
+      supplier_id = #{supplier.id}
+    where id = #{id}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap">
+     select  bill.id, bill.sn, bill.vdate, bill.status, bill.totalAmount, bill.totalNumber,
+ 				s.id s_id, s.name s_name,
+ 				inputUser.id iu_id, inputUser.name iu_name,
+  				auditor.id at_id, auditor.name at_name
+	from orderbill bill
+		left join employee inputUser on bill.inputUser_id =  inputUser.id
+		join employee auditor on bill.auditor_id = auditor.id
+		join supplier s on bill.supplier_id = s.id
+
+    where bill.id = #{id}
+  </select>
+
+
+  <sql id="base_where">
+    <where>
+
+    </where>
+  </sql>
+  <!--分页-->
+  <select id="queryCount" resultType="int" parameterType="cn.wolfcode.wms.query.OrderBillQueryObject">
+    select count(*) from orderbill
+    <include refid="base_where"/>
+  </select>
+  <select id="queryAll" resultMap="BaseResultMap" parameterType="cn.wolfcode.wms.query.OrderBillQueryObject">
+    select  bill.id, bill.sn, bill.vdate, bill.status, bill.totalAmount, bill.totalNumber,
+             s.id s_id, s.name s_name,
+              inputUser.id iu_id, inputUser.name iu_name,
+              auditor.id at_id, auditor.name at_name
+    from orderbill bill
+    left join employee inputUser on bill.inputUser_id =  inputUser.id
+    join employee auditor on bill.auditor_id = auditor.id
+    join supplier s on bill.supplier_id = s.id
+
+
+
+
+    <include refid="base_where"/>
+    limit #{start},#{pageSize}
+  </select>
+  
+  
+</mapper>

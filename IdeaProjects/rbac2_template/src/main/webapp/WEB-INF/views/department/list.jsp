@@ -17,6 +17,8 @@
     </style>
 </head>
 <body>
+
+
 <form id="searchForm" action="/department/list.do" method="post">
     <div id="container">
         <div class="ui_content">

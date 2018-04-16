@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/js/jquery/jquery.js"></script>
+    <script src="/js/plugins/jqueryForm/jQueryForm.js"></script>
+    <script>
+        $(function () {
+            //不带有提交按钮
+            $("#btn").click(function () {
+                //提交表单
+                //$("#f1").submit();
+                $("#f1").ajaxSubmit(function (data) {
+                    console.log(data);
+                });
+            });
+
+
+            /*//带有提交按钮
+            $("#f1").ajaxForm(function (data) {
+                console.log(data);
+            });
+
+            $("#f1").ajaxSubmit(function (data) {
+                console.log(data);
+            });*/
+        });
+    </script>
+</head>
+<body>
+    <form id="f1" action="/department/test.do" method="post">
+        <p>姓名: <input type="text" name="name" value="xx"/> </p>
+        <input id="btn" type="button" value="朕要提交"/>
+    </form>
+</body>
+</html>
