@@ -1,16 +1,14 @@
 package cn.wolfcode.wms.util;
 
 import lombok.Getter;
-import lombok.Setter;
 
-@Setter @Getter
+@Getter
 public class JSONResult {
-    private Boolean success = true;
+    private boolean success = true;
     private String msg;
 
     public void mark(String msg){
-        this.msg = msg;
         success = false;
+        this.msg = msg;
     }
-
 }

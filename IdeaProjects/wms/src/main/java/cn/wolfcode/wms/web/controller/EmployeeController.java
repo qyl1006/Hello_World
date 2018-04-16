@@ -26,7 +26,7 @@ public class EmployeeController {
     @Autowired
     private IRoleService roleService;
 
-    
+
     @RequirePermission("员工列表")
     @RequestMapping("list")
     public String list(@ModelAttribute("qo") EmployeeQueryObject qo, Model model){
@@ -70,6 +70,17 @@ public class EmployeeController {
     public Object delete(Long id){
         if (id != null) {
             employeeService.deleteById(id);
+        }
+
+        return new JSONResult();
+    }
+
+    //批量删除操作
+    @RequestMapping("batchDelete")
+    @ResponseBody
+    public Object batchDelete(Long[] ids){
+        if (ids != null) {
+            employeeService.batchDeleteByIds(ids);
         }
 
         return new JSONResult();

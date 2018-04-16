@@ -17,4 +17,6 @@ public interface IEmployeeService {
     PageResult queryAll(EmployeeQueryObject qo);
 
     void login(String username, String password);
+
+    void batchDeleteByIds(Long[] ids);
 }

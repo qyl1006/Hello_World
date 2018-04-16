@@ -28,4 +28,7 @@ public interface EmployeeMapper {
 
     Employee selectByInfo(@Param("username") String username,
                           @Param("encoder") String encoder);
+
+    //批量删除
+    void batchDeleteByIds(Long[] ids);
 }

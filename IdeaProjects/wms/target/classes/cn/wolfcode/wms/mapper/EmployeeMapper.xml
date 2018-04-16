@@ -29,6 +29,16 @@
     delete from employee_role where employee_id = #{id}
   </delete>
 
+  <!--批量删除-->
+  <delete id="batchDeleteByIds">
+    delete from employee
+      where id in
+      <foreach collection="array" item="item" index="index"
+               open="(" separator="," close=")">
+          #{item}
+      </foreach>
+  </delete>
+
 
   <insert id="insert" keyProperty="id" useGeneratedKeys="true">
     insert into employee (name, password, email, age, admin, dept_id)

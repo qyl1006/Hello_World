@@ -89,4 +89,10 @@ public class EmployeeServiceImpl implements IEmployeeService {
 
 
     }
+
+    //批量删除
+    @Override
+    public void batchDeleteByIds(Long[] ids) {
+         employeeMapper.batchDeleteByIds(ids);
+    }
 }

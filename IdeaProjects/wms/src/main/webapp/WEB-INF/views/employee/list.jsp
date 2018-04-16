@@ -9,7 +9,7 @@
 <link href="/style/common_style.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="/js/jquery/jquery.js"></script>
 
-	<script type="text/javascript" src="/plugins/artDialog/jquery.artDialog.js?skin=blue"></script>
+<script type="text/javascript" src="/plugins/artDialog/jquery.artDialog.js?skin=blue"></script>
 
 
 <script type="text/javascript" src="/js/commonAll.js"></script>
@@ -46,13 +46,10 @@
 							<input type="button" value="查询" class="ui_input_btn01" data-page="1"/>
 							<input type="button" value="新增" class="ui_input_btn01 btn_input"
 									data-url="/employee/input.do"/>
-						</div>
 
-						<script type="text/javascript">
-							$(".btn_input").click(function () {
-								location.href = $(this).data("url");
-                            });
-						</script>
+							<input type="button" value="批量删除" data-url="/employee/batchDelete.do"
+								   class="ui_input_btn02 btn_batchDelete">
+						</div>
 
 
 					</div>
@@ -73,7 +70,7 @@
 
 						<c:forEach items="${result.data}" var="item" varStatus="num">
 						<tr>
-							<td><input type="checkbox" class="acb" /></td>
+							<td><input type="checkbox" class="acb" data-eid="${item.id}"/></td>
 							<td>${num.count}</td>
 							<td>${item.name}</td>
 							<td>${item.email}</td>

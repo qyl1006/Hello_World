@@ -1,3 +1,4 @@
+jQuery.ajaxSettings.traditional = true;
 /** table鼠标悬停换色* */
 $(function () {
     // 如果鼠标移到行上时，执行函数
@@ -41,6 +42,11 @@ $(function () {
 
 
 $(function () {
+    //新增
+    $(".btn_input").click(function () {
+        location.href = $(this).data("url");
+    });
+
     //删除功能
     $(".btn_delete").click(function () {
         var url = $(this).data("url");
@@ -59,10 +65,7 @@ $(function () {
 
     });
 
-
-
 })
-
 
     function showDialog(content, ok, cancel) {
         $.dialog({
@@ -79,6 +82,5 @@ $(function () {
             //图标
             icon: "face-smile"
         });
-
 }
 
