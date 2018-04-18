@@ -13,9 +13,13 @@ public interface OrderBillMapper {
 
     OrderBill selectByPrimaryKey(Long id);
 
+    //更新
     int updateByPrimaryKey(OrderBill record);
 
     //分页
     int queryCount(OrderBillQueryObject qo);
     List<OrderBill> queryAll(OrderBillQueryObject qo);
+
+    //审核
+    void updataAuditorById(OrderBill old);
 }

@@ -22,9 +22,9 @@ public class OrderBill extends BaseDomain{
     private BigDecimal totalAmount; //采购金额
     private BigDecimal totalNumber; //采购总数
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @DateTimeFormat(pattern="yyyy-MM-dd")
     private Date auditTime; //审核时间
-     @DateTimeFormat(pattern = "yyyy-MM-dd")
+     @DateTimeFormat(pattern="yyyy-MM-dd")
     private Date inputTime; //录入时间
 
     private Employee inputUser; //录入人

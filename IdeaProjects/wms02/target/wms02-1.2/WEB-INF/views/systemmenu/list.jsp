@@ -43,7 +43,7 @@
 				当前菜单:
 				<a href="/systemmenu/list.do">根菜单</a>
 				<c:forEach items="${menus}" var="item">
-					-&gt;<a href="/systemmenu/list.do?parentId=${qo.parentId}">${item.name}</a>
+					-&gt;<a href="/systemMenu/list.do?parentId=${qo.parentId}">${item.name}</a>
 				</c:forEach>
 
 			</div>

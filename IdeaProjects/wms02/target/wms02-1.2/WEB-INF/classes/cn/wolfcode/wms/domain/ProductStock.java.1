@@ -1,0 +1,65 @@
+package cn.wolfcode.wms.domain;
+
+import java.math.BigDecimal;
+
+public class ProductStock {
+    private Long id;
+
+    private BigDecimal price;
+
+    private BigDecimal storeNumber;
+
+    private BigDecimal amount;
+
+    private Long product_id;
+
+    private Long depot_id;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
+
+    public BigDecimal getStoreNumber() {
+        return storeNumber;
+    }
+
+    public void setStoreNumber(BigDecimal storeNumber) {
+        this.storeNumber = storeNumber;
+    }
+
+    public BigDecimal getAmount() {
+        return amount;
+    }
+
+    public void setAmount(BigDecimal amount) {
+        this.amount = amount;
+    }
+
+    public Long getProduct_id() {
+        return product_id;
+    }
+
+    public void setProduct_id(Long product_id) {
+        this.product_id = product_id;
+    }
+
+    public Long getDepot_id() {
+        return depot_id;
+    }
+
+    public void setDepot_id(Long depot_id) {
+        this.depot_id = depot_id;
+    }
+}

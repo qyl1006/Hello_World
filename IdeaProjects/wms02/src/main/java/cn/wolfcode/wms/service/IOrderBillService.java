@@ -16,4 +16,5 @@ public interface IOrderBillService {
 
     PageResult queryAll(OrderBillQueryObject qo);
 
+    void updataAuditorById(Long id);
 }

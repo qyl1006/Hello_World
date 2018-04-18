@@ -11,8 +11,12 @@
 <link href="/style/common_style.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="/js/jquery/jquery.js"></script>
 <script type="text/javascript" src="/plugins/artDialog/jquery.artDialog.js?skin=blue"></script>
+	<script type="text/javascript" src="/plugins/My97DatePicker/WdatePicker.js"></script>
+
 <script type="text/javascript" src="/js/commonAll.js"></script>
 <title>WMS-采购订单管理
+
+
 
 </title>
 <style>
@@ -28,10 +32,12 @@
 						<div id="box_top">搜索</div>
 						<div id="box_center">
 							业务时间
-							<input type="text" class="ui_input_txt02" name="beginDate" value="${qo.keyword}" />
-							<input type="text" class="ui_input_txt02" name="endDate" value="${qo.keyword}" />
+							<fmt:formatDate var="beginDate" value="${qo.beginDate}" pattern="yyyy-MM-dd"/>
+							<fmt:formatDate var="endDate" value="${qo.endDate}" pattern="yyyy-MM-dd"/>
+							<input type="text" class="ui_input_txt02" name="beginDate" value="${beginDate}" class="ui_input_btn02 Wdate"/> ~
+							<input type="text" class="ui_input_txt02" name="endDate" value="${endDate}" calss="ui_input_btn02 Wdate"/>
 							供应商
-							<select class="ui_select01" name="supplierId">
+							<select class="ui_select01 supplierId" name="supplierId">
 								<option value="-1">--全部供应商--</option>
 								<c:forEach items="${suppliers}" var="item">
 								<option value="${item.id}">${item.name}</option>
@@ -39,15 +45,52 @@
 							</select>
 
 							状态
-							<select class="ui_select01" name="status">
+							<select class="ui_select01 status" name="status">
 								<option value="-1">--全部--</option>
 								<option value="1">--未审核--</option>
 								<option value="2">--已审核--</option>
 							</select>
+
+							<%--//高级查询回显数据--%>
+							<script type="text/javascript">
+								$(function () {
+                                    $(".supplierId option[value='${qo.supplierId}']").prop("selected", true);
+                                    $(".status option[value='${qo.status}']").prop("selected", true);
+
+                                    //处理开始时间
+                                    $("input[name='beginDate']").click(function () {
+										WdatePicker({
+											readOnly: true,
+                                            lang:'zh-cn',
+											maxDate: new Date()
+											}
+										)
+                                    });
+
+                                    //处理结束时间
+                                    $("input[name='endDate']").click(function () {
+                                        WdatePicker({
+                                                readOnly: true,
+                                            lang:'zh-cn',
+												minDate: $("input[name='beginDate']").val(),
+                                                maxDate: new Date()
+                                            }
+                                        )
+                                    });
+
+                                    //查询
+									$(".query").click(function () {
+                                        $("#searchForm").submit();
+                                    });
+
+                                })
+
+							</script>
+
 						</div>
 						<div id="box_bottom">
-							<input type="button" value="查询" class="ui_input_btn01"/>
-							<input type="button" value="新增" class="custom_button" id="increase"
+							<input type="button" value="查询" class="ui_input_btn02 query"/>
+							<input type="button" value="新增" class="ui_input_btn02 custom_button" id="increase"
 									data-url="/orderBill/input.do"/>
 
 						</div>
@@ -89,11 +132,30 @@
 								<td>${item.totalAmount}</td>
 								<td>${item.inputUser.name}</td>
 								<td>${item.auditor.name}</td>
-								<td>${item.status}</td>
 								<td>
-									<a href="/orderBill/input.do?id=${item.id}">编辑</a>
-									<a href="javascript:"  data-url="/orderBill/delete.do?id=${item.id}"
-										class="btn_delete">删除</a>
+									<c:choose>
+										<c:when test="${item.status == 1}">
+											<span style="color:green">待审核</span>
+										</c:when>
+										<c:when test="${item.status == 2}">
+											<span style="color:red">已审核</span>
+										</c:when>
+									</c:choose>
+									
+								</td>
+								<td>
+									<c:choose>
+										<c:when test="${item.status == 1}">
+											<a href="/orderBill/input.do?id=${item.id}">编辑</a>
+											<a href="javascript:"  data-url="/orderBill/delete.do?id=${item.id}"
+											   class="btn_delete">删除</a>
+											<a href="/orderBill/auditor.do?id=${item.id}">审核</a>
+										</c:when>
+										<c:when test="${item.status == 2}">
+											<a href="/orderBill/view.do?id=${item.id}">查看</a>
+										</c:when>
+									</c:choose>
+
 								</td>
 							</tr>
 						</c:forEach	>
@@ -103,9 +165,7 @@
 				<%--分页操作--%>
 				<%@include file="/WEB-INF/views/common/common_page.jsp"%>
 
-				<%--//高级查询回显数据--%>
-				<script type="text/javascript">
-				</script>
+
 			</div>
 		</div>
 	</form>
