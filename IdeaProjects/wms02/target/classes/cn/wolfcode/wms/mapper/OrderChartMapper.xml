@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.wolfcode.wms.mapper.OrderChartMapper">
+
+  <select id="queryOrderChart" resultType="map" parameterType="cn.wolfcode.wms.query.OrderChartQueryObject">
+      select ${groupType} groupType, sum(item.number) totalNumber, sum(item.amount) totalAmount
+        from orderbill bill
+        join orderbillitem item on item.bill_id = bill.id
+        join employee e on bill.inputUser_id = e.id
+        join product p on item.product_id = p.id
+        join supplier s on bill.supplier_id = s.id
+        where bill.status = 2
+
+        <if test="beginDate != null">
+          and bill.vdate &gt;= #{beginDate}
+        </if>
+    <if test="endDate != null">
+      and bill.vdate &lt;= #{endDate}
+    </if>
+    <if test="keyword != null">
+      and (p.name like concat('%', #{keyword},'%') OR
+            p.sn like concat('%', #{keyword},'%'))
+    </if>
+    <if test="brandId > 0">
+      and  p.brand_id = #{brandId}
+    </if>
+    <if test="supplierId > 0">
+      and s.id = #{supplierId}
+    </if>
+
+        group by groupType
+  </select>
+  <select id="queryOrderSale" resultType="map" parameterType="cn.wolfcode.wms.query.OrderSaleQueryObject">
+    select ${groupType} groupType, sum(s.number) number, sum(s.saleamount) amount,
+                                  sum(s.saleAmount - s.costAmount) profit
+        from saleaccount s
+        join employee e on e.id = s.saleman_id
+        join product p on p.id = s.product_id
+        join client c on c.id = s.client_id
+
+        <if test="beginDate != null">
+          and s.vdate &gt;= #{beginDate}
+        </if>
+        <if test="endDate != null">
+          and s.vdate &lt;= #{endDate}
+        </if>
+        <if test="keyword != null">
+          and (p.name like concat('%', #{keyword},'%') OR
+          p.sn like concat('%', #{keyword},'%'))
+        </if>
+        <if test="brandId > 0">
+          and  p.brand_id = #{brandId}
+        </if>
+        <if test="clientId > 0">
+          and c.id = #{clientId}
+        </if>
+
+        group by groupType
+
+  </select>
+</mapper>

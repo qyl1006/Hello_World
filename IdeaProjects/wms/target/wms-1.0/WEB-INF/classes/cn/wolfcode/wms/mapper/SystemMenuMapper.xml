@@ -58,9 +58,14 @@
     where id = #{id}
   </select>
 
-
-  <select id="deleteChildByParentId">
-    delete from systemmenu where parent_id = #{parentId}
+  <!--删除所有子菜单-->
+  <select id="deleteChildByChildtId">
+    delete from systemmenu
+    where id in
+    <foreach collection="list" item="item" index="index"
+             open="(" separator="," close=")">
+      #{item}
+    </foreach>
   </select>
 
   <select id="getParentMenus" resultMap="BaseResultMap">
@@ -71,5 +76,14 @@
 			on child.parent_id = parent.id
 
 		  where child.id = #{parentId}
+  </select>
+
+  <!--根据父菜单查询直接子菜单  用于删除所有子菜单使用-->
+  <select id="selectChildByparentId" resultMap="BaseResultMap">
+      select child.id, child.parent_id,
+            p.id p_id, p.name p_name
+        from systemmenu child left join systemmenu p
+          on child.parent_id = p.id
+      where child.parent_id = #{parentId}
   </select>
 </mapper>

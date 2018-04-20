@@ -45,6 +45,13 @@
                 $("#searchForm").submit();
             }
         });
+
+        //查询
+        $(".btn_query").click(function () {
+            //当前页设置1
+            $(".ui_input_txt01").val(1);
+            $("#searchForm").submit();
+        });
     });
 
     //页面容量回显

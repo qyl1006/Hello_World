@@ -83,9 +83,14 @@
                                         $("#searchForm").submit();
                                     });
 
-									//审核弹窗
+									//审核 --确认弹窗
 									$(".btn_audit").click(function () {
-										location.href = $(this).data("url");
+									    var temp = $(this);
+
+                                        showDialog("确定要审核吗?", function () {
+                                            location.href = temp.data("url");
+                                        },true);
+
                                     });
 
                                 })

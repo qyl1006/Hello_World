@@ -7,6 +7,7 @@
 	<link href="/style/main_css.css" rel="stylesheet" type="text/css" />
 	<link href="/style/zTreeStyle.css" rel="stylesheet" type="text/css">
 	<script type="text/javascript" src="/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/plugins/jqueryZtree/jquery.ztree.core-3.4.min.js"></script>
 	<script type="text/javascript" src="/js/commonAll.js"></script>
 	<script type="text/javascript" src="/js/system/index.js"></script>
 </head>
@@ -62,10 +63,10 @@
 		 	</div>
 		 	<div id="nav_resource">
 		 		<ul id="dleft_tab1" class="ztree"></ul>
-					<a href="/department/list.do" target="right">部门管理</a><br>
-					<a href="/employee/list.do" target="right">员工管理</a><br>
-					<a href="/permission/list.do" target="right">权限管理</a><br>
-					<a href="/role/list.do" target="right">角色管理</a><br>
+					<%--<a href="/department/list.do" target="right">部门管理</a><br>--%>
+					<%--<a href="/employee/list.do" target="right">员工管理</a><br>--%>
+					<%--<a href="/permission/list.do" target="right">权限管理</a><br>--%>
+					<%--<a href="/role/list.do" target="right">角色管理</a><br>--%>
 		 	</div>
 		 </div>
 	</div>

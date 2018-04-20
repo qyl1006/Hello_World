@@ -39,6 +39,7 @@ public class Product extends BaseDomain{
         map.put("id", id);
         map.put("name", name);
         map.put("costPrice", costPrice);
+        map.put("salePrice", salePrice);
         map.put("brandName", brandName);
 
         return JSONUtil.toJSONString(map);

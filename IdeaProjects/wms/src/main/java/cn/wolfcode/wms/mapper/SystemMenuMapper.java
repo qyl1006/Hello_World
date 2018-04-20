@@ -20,8 +20,11 @@ public interface SystemMenuMapper {
     SystemMenu getParentById(Long parentId);
 
     //删除所有子菜单
-    void deleteChildByParentId(Long id);
+    void deleteChildByChildtId(List<Long> childId);
 
     //查菜单目录层级
     SystemMenu getParentMenus(Long parentId);
+
+    //根据父菜单查询直接子菜单
+    List<SystemMenu> selectChildByparentId(Long parentId);
 }

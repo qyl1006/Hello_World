@@ -39,10 +39,6 @@
       limit #{start},#{pageSize}
   </select>
 
-  <select id="selectByEmployeeId" resultType="department">
-    select id, name, sn from department where id  = #{deptId}
-
-  </select>
   <select id="listAll" resultType="department">
       select id, name, sn from department
   </select>

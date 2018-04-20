@@ -32,139 +32,93 @@
     <favorites_list name="wms02" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="StockInComeBill.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/domain/StockInComeBill.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StockInComeBillController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/web/controller/StockInComeBillController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="71" column="48" lean-forward="true" selection-start-line="71" selection-start-column="48" selection-end-line="71" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/stockIncomeBill/list.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="168" column="0" lean-forward="true" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="common_page.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/common/common_page.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IStockInComeBillService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/IStockInComeBillService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="15" column="9" lean-forward="false" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StockInComeBillService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/impl/StockInComeBillService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="217" column="42" lean-forward="false" selection-start-line="217" selection-start-column="42" selection-end-line="217" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#4489#4490#0" expanded="true" />
-                <element signature="e#4556#4557#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductStockMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/ProductStockMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductStockMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/ProductStockMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="31" column="2" lean-forward="false" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
-              <folding>
-                <marker date="1524064465258" expanded="true" signature="1026:1071" ph="delete from productstock... " />
-                <marker date="1524064465258" expanded="true" signature="1152:1286" ph="insert into productstock... " />
-                <marker date="1524064465258" expanded="true" signature="1152:1304" ph="insert into productstock... " />
-                <marker date="1524064465258" expanded="true" signature="1356:1547" ph="update productstock... " />
-                <marker date="1524064465258" expanded="true" signature="1523:1547" ph="update productstock... " />
-                <marker date="1524064465258" expanded="true" signature="1625:1727" ph="select id, p... productstock" />
-                <marker date="1524064465258" expanded="true" signature="1836:1857" ph="select count... department" />
-                <marker date="1524064465258" expanded="true" signature="1836:1869" ph="select count... productstock" />
-                <marker date="1524064465258" expanded="true" signature="1971:2310" ph="select id, p... productstock" />
-                <marker date="1524064465258" expanded="true" signature="2279:2310" ph="select id, n... department" />
-                <marker date="1524064465258" expanded="true" signature="2396:2717" ph="select id, p... productstock" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StockInComeBillMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/StockInComeBillMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="22" column="9" lean-forward="false" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StockInComeBillMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/StockInComeBillMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="62" column="75" lean-forward="false" selection-start-line="62" selection-start-column="75" selection-end-line="62" selection-end-column="75" />
-              <folding>
-                <element signature="e#3023#3027#0" expanded="true" />
-                <element signature="e#3117#3121#0" expanded="true" />
-                <marker date="1524067355035" expanded="true" signature="1566:1578" ph="delete from orderbill... " />
-                <marker date="1524067355035" expanded="true" signature="1566:1614" ph="delete from stockincomebill... " />
-                <marker date="1524067355035" expanded="true" signature="1696:1932" ph="insert into stockincomebill... " />
-                <marker date="1524067355035" expanded="true" signature="1985:2176" ph="update stockincomebill... " />
-                <marker date="1524067355035" expanded="true" signature="2254:2395" ph="update stockincomebill " />
-                <marker date="1524067355035" expanded="true" signature="2476:2909" ph="select bill.... stockincomebill" />
-                <marker date="1524067355035" expanded="true" signature="3391:3432" ph="select count... stockincomebill" />
-                <marker date="1524067355035" expanded="true" signature="3600:4106" ph="select bill.... stockincomebill" />
-                <marker date="1524067355035" expanded="true" signature="3857:4106" ph="select bill.... orderbill" />
-                <marker date="1524067355035" expanded="true" signature="4030:4106" ph="select bill.... orderbill" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.67629176">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="sale.jsp" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/chart/sale.jsp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="342">
+                  <caret line="121" column="44" lean-forward="false" selection-start-line="121" selection-start-column="44" selection-end-line="121" selection-end-column="44" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="order.jsp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/chart/order.jsp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="166">
+                  <caret line="112" column="40" lean-forward="false" selection-start-line="112" selection-start-column="40" selection-end-line="112" selection-end-column="40" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="OrderChartMapper.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/OrderChartMapper.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="126">
+                  <caret line="13" column="30" lean-forward="false" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="OrderSaleQueryObject.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/query/OrderSaleQueryObject.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="79">
+                  <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="OrderChartController.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/web/controller/OrderChartController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="371">
+                  <caret line="63" column="26" lean-forward="false" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="26" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="OrderChartMapper.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/OrderChartMapper.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="126">
+                  <caret line="13" column="30" lean-forward="false" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="OrderChartMapper.xml" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/OrderChartMapper.xml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="128">
+                  <caret line="32" column="2" lean-forward="false" selection-start-line="32" selection-start-column="2" selection-end-line="32" selection-end-column="2" />
+                  <folding>
+                    <element signature="e#746#750#0" expanded="true" />
+                    <element signature="e#832#836#0" expanded="true" />
+                    <element signature="e#1680#1684#0" expanded="true" />
+                    <element signature="e#1771#1775#0" expanded="true" />
+                    <marker date="1524240134216" expanded="true" signature="324:1178" ph="select ${gro... orderbill" />
+                    <marker date="1524240134216" expanded="true" signature="1302:2151" ph="select ${gro... saleaccount" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -177,68 +131,68 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ui_input_btn01</find>
-      <find>btn_submit</find>
-      <find>sn</find>
-      <find>`</find>
-      <find>OrderBillMapper</find>
-      <find>orderBillMapper</find>
-      <find>item</find>
-      <find>OrderBill</find>
-      <find>订单</find>
-      <find>orderBill</find>
-      <find>dleft_tab1</find>
-      <find>orderbill</find>
-      <find>supplierId</find>
-      <find>supplierService</find>
-      <find>suppliers</find>
-      <find>保存</find>
-      <find>pruu</find>
-      <find>orderbillitem</find>
-      <find>supplier</find>
-      <find>stockInComeBill</find>
-      <find>auditor</find>
-      <find>_id}</find>
-      <find>QueryObject</find>
-      <find>Productstock</find>
       <find>Department</find>
       <find>部门</find>
-      <find>department</find>
-      <find>product</find>
-      <find>ProductStockMapper</find>
+      <find>stockincomebillitem</find>
+      <find>StockInComeBillItem</find>
+      <find>StockInCome</find>
+      <find>StockOutcomeBillBill</find>
+      <find>stockInComeBill</find>
+      <find>orderBillItemMapper</find>
+      <find>Cost</find>
+      <find>StockInComeBill</find>
+      <find>入库</find>
+      <find>depotId</find>
+      <find>depots</find>
+      <find>stockIncomeBill</find>
+      <find>采购</find>
+      <find>stockincomebill</find>
+      <find>costPrice</find>
+      <find>salePrice</find>
       <find>审核</find>
+      <find>del</find>
+      <find>btn_auditor</find>
+      <find>btn_delete</find>
+      <find>getmenusBySn</find>
+      <find>auditor</find>
+      <find>item.getNumber()</find>
+      <find>_id}</find>
+      <find>ui_input_txt01</find>
+      <find>btn_page</find>
+      <find>custom_button</find>
+      <find>department</find>
     </findStrings>
     <replaceStrings>
-      <replace>DepartmentController</replace>
-      <replace>商品</replace>
-      <replace>product</replace>
-      <replace>Product</replace>
-      <replace>brandName</replace>
-      <replace>orderbill</replace>
-      <replace>OrderBill</replace>
-      <replace>erderBill</replace>
-      <replace>采购订单</replace>
-      <replace>orderBill</replace>
-      <replace>Depot</replace>
-      <replace>仓库</replace>
-      <replace>location</replace>
-      <replace>StockInComeBill</replace>
-      <replace>入库</replace>
-      <replace>stockInComeBill</replace>
-      <replace>stockincomebill</replace>
       <replace>depotId</replace>
       <replace>depotService</replace>
       <replace>depots</replace>
       <replace>stockincomebillitem</replace>
       <replace>depot</replace>
       <replace>stockIncomeBill</replace>
-      <replace>.id}</replace>
       <replace>P</replace>
       <replace>productstock</replace>
       <replace>Productstock</replace>
       <replace>ProductStock</replace>
       <replace>即时库存</replace>
       <replace>productStock</replace>
+      <replace>Client</replace>
+      <replace>客户</replace>
+      <replace>client</replace>
+      <replace>StockOutcomeBillItem</replace>
+      <replace>stockoutcomebillitem</replace>
+      <replace>stockOutcomeBillItemMapper</replace>
+      <replace>sale</replace>
+      <replace>StockOutcomeBill</replace>
+      <replace>销售</replace>
+      <replace>clientId</replace>
+      <replace>clients</replace>
+      <replace>出库</replace>
+      <replace>salePrice</replace>
+      <replace>stockOutcomeBill</replace>
+      <replace>emtpNum</replace>
+      <replace>.id}</replace>
+      <replace>ui_input_txt02</replace>
+      <replace>OrderChart</replace>
     </replaceStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -249,57 +203,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/impl/OrderBillServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/OrderBillMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/domain/OrderBill.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/query/OrderBillQueryObject.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orderBill/input.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/web/controller/OrderBillController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orderBill/view.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orderBill/list.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/OrderBillItemMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/OrderBillMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/domain/Depot.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/web/controller/DepotController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/depot/list.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/depot/input.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/domain/StockInComeBillItem.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/domain/StockInComeBill.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/StockInComeBillItem.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/query/StockInComeBillQueryObject.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/StockInComeBillItem.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/StockInComeBill.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/IStockInComeBillService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/StockInComeBillItemMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/StockInComeBillMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/impl/StockInComeBill.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/stockInComeBill/list.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/stockInComeBill/input.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/stockInComeBill/view.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/mvc.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/StockInComeBill.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/IDepotService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/impl/DepotServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/DepotMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/DepotMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/stockIncomeBill/input.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/OrderBillItemMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/StockInComeBillItemMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/stockIncomeBill/view.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/query/ProductStockQueryObject.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/ProductStockMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/impl/ProductStockServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/IProductStockService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/domain/ProductStock.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/productStock/list.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/web/controller/ProductController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/web/controller/ProductStockController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/ProductStockMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/web/controller/StockInComeBillController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/impl/StockInComeBillService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/StockInComeBillMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/domain/Client.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/DepartmentMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/DepartmentMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/IClientService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/ClientMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/impl/ClientServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/web/controller/ClientController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/client/list.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/client/input.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/domain/StockOutcomeBillItem.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/StockOutcomeBillItemMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/StockOutcomeBillItemMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/domain/StockOutcomeBill.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/StockOutcomeBillMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/IStockOutcomeBillService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/stockOutcomeBill/input.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/stockOutcomeBill/view.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/domain/Product.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/StockOutcomeBillMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/commonAll.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/stockIncomeBill/list.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/web/controller/StockOutcomeBillController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/stockOutcomeBill/list.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/domain/SaleAccount.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/SaleAccountMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/impl/StockOutcomeBillService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/SaleAccountMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/util/DateUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/query/OrderBillQueryObject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/query/StockInComeBillQueryObject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/query/StockOutcomeBillQueryObject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/query/ProductStockQueryObject.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/ProductStockMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/common/common_page.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/web/controller/ProductStockController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/productStock/list.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/query/OrderChartQueryObject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/GroupCharMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/query/OrderSaleQueryObject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/OrderSaleMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/OrderSaleMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/OrderChartMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/OrderChartMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/IOrderChartService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/impl/OrderChartServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/ClientMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/web/controller/OrderChartController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/chart/order.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/chart/sale.jsp" />
       </list>
     </option>
   </component>
@@ -362,9 +316,10 @@
     <option name="jreName" value="1.8" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="566" />
+    <option name="x" value="164" />
+    <option name="y" value="261" />
     <option name="width" value="1382" />
-    <option name="height" value="691" />
+    <option name="height" value="552" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -442,8 +397,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -652,6 +605,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wms02" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wms02" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="plugins" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -688,6 +649,36 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="chart" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wms02" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wms02" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wms02" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wms02" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="employee" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wms02" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wms02" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="productStock" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -700,11 +691,23 @@
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="stockIncomeBill" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="wms02" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wms02" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="stockOutcomeBill" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -714,22 +717,22 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ajax" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.wolfcode.wms.query" />
+      <recent name="cn.wolfcode.wms.mapper" />
       <recent name="cn.wolfcode.wms.web.controller" />
       <recent name="cn.wolfcode.wms.service.impl" />
       <recent name="cn.wolfcode.wms.service" />
-      <recent name="cn.wolfcode.wms.query" />
-      <recent name="cn.wolfcode.wms.domain" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="H:\Hello_World\IdeaProjects\wms02\src\main\webapp\WEB-INF\views" />
+      <recent name="H:\Hello_World\IdeaProjects\wms02\src\main\webapp\WEB-INF\views\chart" />
       <recent name="H:\Hello_World\IdeaProjects\wms02\src\main\resources\cn\wolfcode\wms\mapper" />
+      <recent name="H:\Hello_World\IdeaProjects\wms02\src\main\webapp\WEB-INF\views" />
       <recent name="H:\Hello_World\IdeaProjects\wms02\src\main\webapp\WEB-INF\views\orderBill" />
       <recent name="H:\Hello_World\IdeaProjects\wms02\src\main\webapp\WEB-INF\views\product" />
-      <recent name="H:\Hello_World\IdeaProjects\wms02\src\main\webapp\plugins\artDialog" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -938,12 +941,16 @@
       <workItem from="1523890018072" duration="7795000" />
       <workItem from="1523926337784" duration="38165000" />
       <workItem from="1524012635473" duration="11510000" />
-      <workItem from="1524041892947" duration="22671000" />
+      <workItem from="1524041892947" duration="22905000" />
+      <workItem from="1524102974940" duration="17918000" />
+      <workItem from="1524132357290" duration="2338000" />
+      <workItem from="1524138490632" duration="2021000" />
+      <workItem from="1524185872432" duration="30241000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="201067000" />
+    <option name="totallyTimeSpent" value="253819000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -956,12 +963,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298791" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298791" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.256654" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.253886" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38687393" sideWeight="0.50303954" order="10" side_tool="true" content_ui="tabs" />
@@ -973,13 +979,13 @@
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298791" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26899695" sideWeight="0.47457626" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24772036" sideWeight="0.47457626" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2781155" sideWeight="0.5254237" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4749568" sideWeight="0.4969605" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36960277" sideWeight="0.4969605" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1032,290 +1038,32 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/impl/ProductStockServiceImpl.java</url>
-          <line>44</line>
+          <url>file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/impl/StockOutcomeBillService.java</url>
+          <line>214</line>
           <properties />
-          <option name="timeStamp" value="102" />
+          <option name="timeStamp" value="118" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="103" />
+      <option name="time" value="133" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/StockInComeBillMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/impl/ProductServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="37" column="28" lean-forward="false" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
+        <state relative-caret-position="335">
+          <caret line="44" column="46" lean-forward="false" selection-start-line="44" selection-start-column="46" selection-end-line="44" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/StockInComeBillMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/IProductService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/EmployeeMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/impl/StockInComeBill.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/impl/DepartmentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/system/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
-          <caret line="68" column="34" lean-forward="false" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mvc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="40" column="36" lean-forward="true" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/main.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="54" lean-forward="false" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.2.4.RELEASE/spring-webmvc-4.2.4.RELEASE-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="968" column="0" lean-forward="false" selection-start-line="968" selection-start-column="0" selection-end-line="968" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.2.4.RELEASE/spring-web-4.2.4.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="227" column="0" lean-forward="false" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.2.4.RELEASE/spring-aop-4.2.4.RELEASE-sources.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="226" column="0" lean-forward="false" selection-start-line="226" selection-start-column="0" selection-end-line="226" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.2.4.RELEASE/spring-aop-4.2.4.RELEASE-sources.jar!/org/springframework/aop/interceptor/ExposeInvocationInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/4.2.4.RELEASE/spring-tx-4.2.4.RELEASE-sources.jar!/org/springframework/transaction/interceptor/TransactionAspectSupport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="284" column="0" lean-forward="false" selection-start-line="284" selection-start-column="0" selection-end-line="284" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/query/StockInComeBillQueryObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/IDepotService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="18" column="15" lean-forward="false" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/impl/DepotServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="50" column="32" lean-forward="true" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
-          <folding>
-            <element signature="e#1355#1356#0" expanded="false" />
-            <element signature="e#1399#1400#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/DepotMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/DepotMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="43" column="32" lean-forward="false" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
-          <folding>
-            <marker date="1524055407280" expanded="true" signature="461:499" ph="delete from depot... " />
-            <marker date="1524055407280" expanded="true" signature="580:648" ph="insert into depot... " />
-            <marker date="1524055407280" expanded="true" signature="700:786" ph="update depot... " />
-            <marker date="1524055407280" expanded="true" signature="864:925" ph="select id, n... depot" />
-            <marker date="1524055407280" expanded="true" signature="994:1034" ph="select id, n... depot" />
-            <marker date="1524055407280" expanded="true" signature="1158:1182" ph="select count... department" />
-            <marker date="1524055407280" expanded="true" signature="1158:1184" ph="select count... depot" />
-            <marker date="1524055407280" expanded="true" signature="1295:1362" ph="select id, n... depot" />
-            <marker date="1524055407280" expanded="true" signature="1330:1362" ph="select id, n... department" />
-            <marker date="1524055407280" expanded="true" signature="1428:1454" ph="select id, n... depot" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/stockIncomeBill/input.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-58">
-          <caret line="153" column="59" lean-forward="false" selection-start-line="153" selection-start-column="59" selection-end-line="153" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/domain/StockInComeBillItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/OrderBillItemMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1523980713987" expanded="true" signature="886:938" ph="delete from orderbillitem... " />
-            <marker date="1523980713987" expanded="true" signature="1021:1188" ph="insert into orderbillitem... " />
-            <marker date="1523980713987" expanded="true" signature="1281:1520" ph="select item.... orderbillitem" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="61" column="8" lean-forward="false" selection-start-line="61" selection-start-column="8" selection-end-line="61" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/OrderBillItemMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/StockInComeBillItemMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="20" column="2" lean-forward="false" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
-          <folding>
-            <marker date="1524056768540" expanded="true" signature="898:910" ph="delete from orderbillitem... " />
-            <marker date="1524056768540" expanded="true" signature="898:956" ph="delete from stockincomebillitem... " />
-            <marker date="1524056768540" expanded="true" signature="1039:1212" ph="insert into stockincomebillitem... " />
-            <marker date="1524056768540" expanded="true" signature="1305:1550" ph="select item.... stockincomebillitem" />
-            <marker date="1524056768540" expanded="true" signature="1464:1550" ph="select item.... orderbillitem" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/StockInComeBillItemMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="9" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/stockIncomeBill/view.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-814">
-          <caret line="39" column="44" lean-forward="false" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/generatorConfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="63" column="70" lean-forward="false" selection-start-line="63" selection-start-column="70" selection-end-line="63" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/DepartmentMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="39" column="11" lean-forward="true" selection-start-line="32" selection-start-column="1" selection-end-line="39" selection-end-column="11" />
-          <folding>
-            <marker date="1523620605560" expanded="true" signature="459:502" ph="delete from department... " />
-            <marker date="1523620605560" expanded="true" signature="583:644" ph="insert into department... " />
-            <marker date="1523620605560" expanded="true" signature="696:775" ph="update department... " />
-            <marker date="1523620605560" expanded="true" signature="853:913" ph="select id, n... department" />
-            <marker date="1523620605560" expanded="true" signature="982:1021" ph="select id, n... department" />
-            <marker date="1523620605560" expanded="true" signature="1147:1178" ph="select count... department" />
-            <marker date="1523620605560" expanded="true" signature="1294:1362" ph="select id, n... department" />
-            <marker date="1523620605560" expanded="true" signature="1439:1496" ph="select id, n... department" />
-            <marker date="1523620605560" expanded="true" signature="1564:1599" ph="select id, n... department" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/DepartmentMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/query/ProductQueryObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="126">
+          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -1328,108 +1076,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.2.4.RELEASE/spring-aop-4.2.4.RELEASE-sources.jar!/org/springframework/aop/support/AopUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="301" column="0" lean-forward="false" selection-start-line="301" selection-start-column="0" selection-end-line="301" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/web/controller/ProductController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/query/QueryObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/web/controller/ProductStockController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="23" column="51" lean-forward="false" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/IProductStockService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="16" column="15" lean-forward="false" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/query/ProductStockQueryObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/impl/ProductStockServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="39" column="54" lean-forward="true" selection-start-line="39" selection-start-column="54" selection-end-line="39" selection-end-column="54" />
-          <folding>
-            <element signature="e#900#901#0" expanded="true" />
-            <element signature="e#957#958#0" expanded="true" />
-            <element signature="e#1015#1016#0" expanded="true" />
-            <element signature="e#1079#1080#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/domain/ProductStock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/domain/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="12" column="40" lean-forward="true" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/productStock/list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="60" column="56" lean-forward="true" selection-start-line="60" selection-start-column="50" selection-end-line="60" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/web/controller/StockInComeBillController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="71" column="48" lean-forward="true" selection-start-line="71" selection-start-column="48" selection-end-line="71" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/IStockInComeBillService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="15" column="9" lean-forward="false" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/domain/StockInComeBill.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
@@ -1437,80 +1084,199 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/ProductStockMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="31" column="2" lean-forward="false" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
-          <folding>
-            <marker date="1524064465258" expanded="true" signature="1026:1071" ph="delete from productstock... " />
-            <marker date="1524064465258" expanded="true" signature="1152:1286" ph="insert into productstock... " />
-            <marker date="1524064465258" expanded="true" signature="1152:1304" ph="insert into productstock... " />
-            <marker date="1524064465258" expanded="true" signature="1356:1547" ph="update productstock... " />
-            <marker date="1524064465258" expanded="true" signature="1523:1547" ph="update productstock... " />
-            <marker date="1524064465258" expanded="true" signature="1625:1727" ph="select id, p... productstock" />
-            <marker date="1524064465258" expanded="true" signature="1836:1857" ph="select count... department" />
-            <marker date="1524064465258" expanded="true" signature="1836:1869" ph="select count... productstock" />
-            <marker date="1524064465258" expanded="true" signature="1971:2310" ph="select id, p... productstock" />
-            <marker date="1524064465258" expanded="true" signature="2279:2310" ph="select id, n... department" />
-            <marker date="1524064465258" expanded="true" signature="2396:2717" ph="select id, p... productstock" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/ProductStockMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/domain/ProductStock.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+          <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/impl/StockInComeBillService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/query/QueryObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="217" column="42" lean-forward="false" selection-start-line="217" selection-start-column="42" selection-end-line="217" selection-end-column="42" />
+        <state relative-caret-position="126">
+          <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/web/controller/ProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/web/controller/EmployeeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/EmployeeMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="80" column="4" lean-forward="false" selection-start-line="80" selection-start-column="4" selection-end-line="80" selection-end-column="4" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4489#4490#0" expanded="true" />
-            <element signature="e#4556#4557#0" expanded="true" />
+            <marker date="1523717903467" expanded="true" signature="938:979" ph="delete from employee... " />
+            <marker date="1523717903467" expanded="true" signature="1027:1078" ph="delete from employee_role... " />
+            <marker date="1523717903467" expanded="true" signature="1416:1555" ph="insert into employee... " />
+            <marker date="1523717903467" expanded="true" signature="1603:1685" ph="insert into employee_role... " />
+            <marker date="1523717903467" expanded="true" signature="1739:1895" ph="update employee... " />
+            <marker date="1523717903467" expanded="true" signature="1973:2065" ph="select id, n... employee" />
+            <marker date="1523717903467" expanded="true" signature="2130:2201" ph="select id, n... employee" />
+            <marker date="1523717903467" expanded="true" signature="2635:2664" ph="select count... employee" />
+            <marker date="1523717903467" expanded="true" signature="2832:2964" ph="select id, n... employee" />
+            <marker date="1523717903467" expanded="true" signature="3034:3138" ph="select id, n... employee" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/StockInComeBillMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/EmployeeMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="22" column="9" lean-forward="false" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+        <state relative-caret-position="72">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/query/ProductQueryObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/IProductStockService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="16" column="15" lean-forward="false" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/impl/ProductStockServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#900#901#0" expanded="false" />
+            <element signature="e#957#958#0" expanded="false" />
+            <element signature="e#1015#1016#0" expanded="false" />
+            <element signature="e#1079#1080#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/StockInComeBillMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/query/ProductStockQueryObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="62" column="75" lean-forward="false" selection-start-line="62" selection-start-column="75" selection-end-line="62" selection-end-column="75" />
+        <state relative-caret-position="288">
+          <caret line="19" column="30" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="30" />
           <folding>
-            <element signature="e#3023#3027#0" expanded="true" />
-            <element signature="e#3117#3121#0" expanded="true" />
-            <marker date="1524067355035" expanded="true" signature="1566:1578" ph="delete from orderbill... " />
-            <marker date="1524067355035" expanded="true" signature="1566:1614" ph="delete from stockincomebill... " />
-            <marker date="1524067355035" expanded="true" signature="1696:1932" ph="insert into stockincomebill... " />
-            <marker date="1524067355035" expanded="true" signature="1985:2176" ph="update stockincomebill... " />
-            <marker date="1524067355035" expanded="true" signature="2254:2395" ph="update stockincomebill " />
-            <marker date="1524067355035" expanded="true" signature="2476:2909" ph="select bill.... stockincomebill" />
-            <marker date="1524067355035" expanded="true" signature="3391:3432" ph="select count... stockincomebill" />
-            <marker date="1524067355035" expanded="true" signature="3600:4106" ph="select bill.... stockincomebill" />
-            <marker date="1524067355035" expanded="true" signature="3857:4106" ph="select bill.... orderbill" />
-            <marker date="1524067355035" expanded="true" signature="4030:4106" ph="select bill.... orderbill" />
+            <element signature="e#387#388#0" expanded="true" />
+            <element signature="e#429#430#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/commonAll.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1404">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/common/common_page.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="648">
+          <caret line="51" column="40" lean-forward="false" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/ProductStockMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="21" column="8" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/ProductStockMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="63" column="8" lean-forward="true" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
+          <folding>
+            <element signature="e#2195#2199#0" expanded="true" />
+            <marker date="1524226366351" expanded="true" signature="1080:1125" ph="delete from productstock... " />
+            <marker date="1524226366351" expanded="true" signature="1206:1358" ph="insert into productstock... " />
+            <marker date="1524226366351" expanded="true" signature="1410:1601" ph="update productstock... " />
+            <marker date="1524226366351" expanded="true" signature="1679:1781" ph="select id, p... productstock" />
+            <marker date="1524226366351" expanded="true" signature="2307:2426" ph="select count... productstock" />
+            <marker date="1524226366351" expanded="true" signature="2307:2428" ph="select count... productstock" />
+            <marker date="1524226366351" expanded="true" signature="2529:2883" ph="select ps.id... productstock" />
+            <marker date="1524226366351" expanded="true" signature="2969:3249" ph="select ps.id... productstock" />
+            <marker date="1524226366351" expanded="true" signature="2969:3302" ph="select ps.id... productstock" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/web/controller/ProductStockController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="31" column="42" lean-forward="false" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/productStock/list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="31" column="38" lean-forward="false" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/StockInComeBillItemMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/StockInComeBillMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/query/OrderBillQueryObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="28" column="2" lean-forward="true" selection-start-line="28" selection-start-column="2" selection-end-line="30" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/DepartmentMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/chart/list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-484">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -1518,8 +1284,237 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/stockIncomeBill/list.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="168" column="0" lean-forward="true" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
+        <state relative-caret-position="234">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/query/OrderChartQueryObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="10" column="23" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/OrderBillItemMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/employee/list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1577">
+          <caret line="88" column="63" lean-forward="true" selection-start-line="88" selection-start-column="63" selection-end-line="88" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/stockOutcomeBill/list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-216">
+          <caret line="81" column="51" lean-forward="true" selection-start-line="81" selection-start-column="51" selection-end-line="81" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/OrderSaleMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/OrderSaleMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="10" column="54" lean-forward="false" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/impl/OrderChartServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="29" column="40" lean-forward="false" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/IOrderChartService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="14" column="30" lean-forward="false" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/BrandMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="42" column="2" lean-forward="false" selection-start-line="42" selection-start-column="2" selection-end-line="42" selection-end-column="2" />
+          <folding>
+            <marker date="1523804318470" expanded="true" signature="449:487" ph="delete from brand... " />
+            <marker date="1523804318470" expanded="true" signature="568:624" ph="insert into brand... " />
+            <marker date="1523804318470" expanded="true" signature="676:750" ph="update brand... " />
+            <marker date="1523804318470" expanded="true" signature="828:883" ph="select id, n... brand" />
+            <marker date="1523804318470" expanded="true" signature="952:986" ph="select id, n... brand" />
+            <marker date="1523804318470" expanded="true" signature="1110:1136" ph="select count... brand" />
+            <marker date="1523804318470" expanded="true" signature="1247:1308" ph="select id, n... brand" />
+            <marker date="1523804318470" expanded="true" signature="1390:1420" ph="select id, n... brand" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/IBrandService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/impl/SupplierServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/BrandMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/impl/BrandServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="51" column="31" lean-forward="true" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
+          <folding>
+            <element signature="e#1330#1331#0" expanded="true" />
+            <element signature="e#1374#1375#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/ClientMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/ClientMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="29" column="2" lean-forward="false" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="2" />
+          <folding>
+            <marker date="1524240779688" expanded="true" signature="498:537" ph="delete from client... " />
+            <marker date="1524240779688" expanded="true" signature="618:692" ph="insert into client... " />
+            <marker date="1524240779688" expanded="true" signature="744:843" ph="update client... " />
+            <marker date="1524240779688" expanded="true" signature="921:984" ph="select id, n... client" />
+            <marker date="1524240779688" expanded="true" signature="1047:1089" ph="select id, n... client" />
+            <marker date="1524240779688" expanded="true" signature="1214:1241" ph="select count... client" />
+            <marker date="1524240779688" expanded="true" signature="1353:1424" ph="select id, n... client" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.2.4.RELEASE/spring-web-4.2.4.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="227" column="0" lean-forward="false" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/IClientService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.2.4.RELEASE/spring-aop-4.2.4.RELEASE-sources.jar!/org/springframework/aop/support/AopUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="301" column="0" lean-forward="false" selection-start-line="301" selection-start-column="0" selection-end-line="301" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/impl/ClientServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding>
+            <element signature="e#1376#1377#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/query/OrderSaleQueryObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/web/controller/OrderChartController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="63" column="26" lean-forward="false" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/OrderChartMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="13" column="30" lean-forward="false" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/OrderChartMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="32" column="2" lean-forward="false" selection-start-line="32" selection-start-column="2" selection-end-line="32" selection-end-column="2" />
+          <folding>
+            <element signature="e#746#750#0" expanded="true" />
+            <element signature="e#832#836#0" expanded="true" />
+            <element signature="e#1680#1684#0" expanded="true" />
+            <element signature="e#1771#1775#0" expanded="true" />
+            <marker date="1524240134216" expanded="true" signature="324:1178" ph="select ${gro... orderbill" />
+            <marker date="1524240134216" expanded="true" signature="1302:2151" ph="select ${gro... saleaccount" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/chart/order.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="112" column="40" lean-forward="false" selection-start-line="112" selection-start-column="40" selection-end-line="112" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/chart/sale.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="121" column="44" lean-forward="false" selection-start-line="121" selection-start-column="44" selection-end-line="121" selection-end-column="44" />
           <folding />
         </state>
       </provider>

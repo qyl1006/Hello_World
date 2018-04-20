@@ -31,11 +31,31 @@ public class SystemMenuServiceImpl implements ISystemMenuService {
 
     @Override
     public void deleteById(Long id) {
-        //先删除所有子菜单
-        systemMenuMapper.deleteChildByParentId(id);
+        //找出所有子菜单的ID
+        List<Long> ids = new ArrayList();
+        //根据父菜单ID查询出直接子菜单
+        List<SystemMenu> childs = systemMenuMapper.selectChildByparentId(id);
 
+        ids = testDelete(ids, childs);
+
+
+        //删除所有子菜单
+       systemMenuMapper.deleteChildByChildtId(ids);
         systemMenuMapper.deleteByPrimaryKey(id);
     }
+
+    private List<Long> testDelete(List<Long> ids, List<SystemMenu> childs) {
+        for (SystemMenu child : childs) {
+             if (child != null) {
+                ids.add(child.getId());
+                //继续查下一个子菜单
+                childs = systemMenuMapper.selectChildByparentId(child.getId());
+                testDelete(ids, childs);
+            }
+        }
+        return ids;
+    }
+
 
     @Override
     public SystemMenu getById(Long id) {
@@ -69,3 +89,4 @@ public class SystemMenuServiceImpl implements ISystemMenuService {
 
 
 }
+

@@ -23,15 +23,44 @@
 				<div class="ui_text_indent">
 					<div id="box_border">
 						<div id="box_top">搜索</div>
-						<div id="box_bottom">
-							<input type="button" value="新增" class="custom_button"
+						<div id="box_center">
+
+								商品名称/编码
+								<input type="text" class="ui_input_txt02" name="keyword" value="${qo.keyword}">
+								仓库
+								<select id="depotId" class="ui_select01" name="depotId">
+									<option value="-1">全部仓库</option>
+								<c:forEach items="${depots}" var="item">
+									<option value="${item.id}">${item.name}</option>
+								</c:forEach>
+
+								</select>
+
+								品牌
+								<select id="brandId" class="ui_select01" name="brandId">
+									<option value="-1">全部品牌</option>
+								<c:forEach items="${brands}" var="item">
+									<option value="${item.id}">${item.name}</option>
+								</c:forEach>
+
+								</select>
+								库存阈值
+								<input type="number" class="ui_input_txt02" name="warnNum" value="${qo.warnNum}">
+								<script>
+                                    $("#depotId option[value='${qo.depotId}']").prop("selected",true);
+                                    $("#brandId option[value='${qo.brandId}']").prop("selected",true);
+								</script>
+							</div >
+							<div id="box_bottom">
+									<input type="button" value="查询" class="custom_button btn_query"/>
+
+									<input type="button" value="新增" class="custom_button btn_input"
 									data-url="/productStock/input.do"/>
-						</div>
+							</div>
 
 						<script type="text/javascript">
 							// 页面跳转
-							$(".custom_button").click(function () {
-                                console.log($(this).data("url"));
+							$(".btn_input").click(function () {
                                 location.href = $(this).data("url");
                             });
 						</script>

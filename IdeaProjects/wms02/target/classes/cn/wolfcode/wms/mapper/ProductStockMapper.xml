@@ -12,6 +12,7 @@
       <result column="name" property="name"/>
       <result column="brandName" property="brandName"/>
       <result column="sn" property="sn"/>
+      <result column="breand_id" property="brandId"/>
     </association>
 
     <association property="depot" column="depot_id" columnPrefix="d_" javaType="depot">
@@ -45,29 +46,46 @@
   </select>
 
   <sql id="base_where">
-
+    <where>
+      <if test="keyword != null">
+        and (p.name like concat('%', #{keyword}, '%') OR
+              p.sn like concat('%', #{keyword}, '%'))
+      </if>
+      <if test="depotId > 0">
+        and d.id = #{depotId}
+      </if>
+      <if test="brandId > 0">
+        and p.brand_id = #{brandId}
+      </if>
+      <if test="warnNum > 0">
+        and ps.storeNumber &lt;= #{warnNum}
+      </if>
+    </where>
   </sql>
 
   <!--分页-->
   <select id="queryCount" resultType="int">
-    select count(*) from productstock
+    select count(*) from  productstock ps
+    join product p on ps.product_id = p.id
+    join depot d on ps.depot_id = d.id
+
     <include refid="base_where"/>
   </select>
   <select id="queryAll" resultMap="BaseResultMap">
     select ps.id, ps.price, ps.storeNumber, ps.amount,
-        p.id p_id, p.name p_name, p.brandName p_brandName, p.sn p_sn,
+        p.id p_id, p.name p_name, p.brandName p_brandName, p.sn p_sn, p.brand_id,
         d.id d_id, d.name d_name
         from productstock ps
         join product p on ps.product_id = p.id
         join depot d on ps.depot_id = d.id
 
-     <include refid="base_where"/>
+        <include refid="base_where"/>
     limit #{start},#{pageSize}
   </select>
 
   <select id="selectByProductAndDepot" resultMap="BaseResultMap">
       select ps.id, ps.price, ps.storeNumber, ps.amount,
-            p.id p_id, p.name p_name, p.brandName p_brandName, p.sn p_sn,
+            p.id p_id, p.name p_name, p.brandName p_brandName, p.sn p_sn, p.brand_id,
             d.id d_id, d.name d_name
     from productstock ps
     join product p on ps.product_id = p.id

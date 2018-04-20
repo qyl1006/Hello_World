@@ -1,5 +1,6 @@
 package cn.wolfcode.wms.query;
 
+import cn.wolfcode.wms.util.DateUtil;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -24,5 +25,9 @@ public class OrderBillQueryObject extends QueryObject {
 
     //订单状态
     private int status = -1;
+
+    public Date getEndDate(){
+        return DateUtil.getEndDate(endDate);
+    }
 
 }
