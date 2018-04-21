@@ -20,6 +20,12 @@
     insert into systemmenu (name, url, sn, parent_id)
     values (#{name}, #{url}, #{sn}, #{parent.id})
   </insert>
+
+  <!--/维护关系&#45;&#45;菜单-->
+  <insert id="insertRelation">
+    insert into role_menu (role_id, menu_id) values (#{roleId}, #{menuId})
+  </insert>
+
   <update id="updateByPrimaryKey">
     update systemmenu
     set name = #{name},
@@ -85,5 +91,38 @@
         from systemmenu child left join systemmenu p
           on child.parent_id = p.id
       where child.parent_id = #{parentId}
+  </select>
+
+  <!--根据角色Id查询所拥有的菜单-->
+  <select id="selectSystemmenuByRoleId" resultType="systemMenu">
+    select id, name  from systemmenu where id in (
+       select menu_id from role_menu where role_id = #{roleId}
+    )
+  </select>
+
+  <!--查询所有有父菜单的菜单-->
+  <select id="getAll" resultType="systemMenu">
+    select id, name from systemmenu where parent_id is not null
+  </select>
+
+  <!--根据角色ID删除中间表旧的关系-->
+  <select id="deleteRelation">
+    delete from role_menu where role_id = #{roleId}
+  </select>
+  <select id="getMenuBySn" resultType="map">
+    select  child.id, child.parent_id pId, child.name, child.url action
+      from systemmenu child
+      join systemmenu parent on child.parent_id = parent.id
+      where parent.sn = #{menuSn}
+  </select>
+
+  <!--动态菜单显示功能 查当前用户所拥有的子菜单-->
+  <select id="getMenuBySnAndUser" resultType="map">
+    select  child.id, child.parent_id pId, child.name, child.url action
+      from systemmenu child
+      join systemmenu parent on child.parent_id = parent.id
+      join role_menu rm on child.id = rm.menu_id
+      join employee_role er on rm.role_id = er.role_id
+      where parent.sn = #{menuSn} and er.employee_id = #{employeeId}
   </select>
 </mapper>

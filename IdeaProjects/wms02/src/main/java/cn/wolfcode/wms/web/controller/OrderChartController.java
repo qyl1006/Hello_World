@@ -10,6 +10,8 @@ import cn.wolfcode.wms.query.PageResult;
 import cn.wolfcode.wms.query.QueryObject;
 import cn.wolfcode.wms.service.*;
 import cn.wolfcode.wms.util.JSONResult;
+import cn.wolfcode.wms.util.JSONUtil;
+import cn.wolfcode.wms.util.MyDictionary;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -68,10 +70,21 @@ public class OrderChartController {
 
     @RequestMapping("saleByBar")
     public String saleByBar(@ModelAttribute("qo") OrderSaleQueryObject qo, Model model){
-//        List<Object> x = new ArrayList<>();
-//        List<Object> y = new ArrayList<>();
-//
-//        List<Map<String, Object>> maps = orderChartService.queryOrderSale(qo);
+
+        List<Object> x = new ArrayList<>();
+        List<Object> y = new ArrayList<>();
+
+        List<Map<String, Object>> maps = orderChartService.queryOrderSale(qo);
+        for (Map<String, Object> map : maps) {
+            //取出当前行中的groupType和totalAmount两个值对应存入x/y
+            x.add(map.get("groupType"));
+            y.add(map.get("amount"));
+        }
+
+        //转换成json存入模式对象中
+        model.addAttribute("groupType", MyDictionary.SALE_MAP.get(qo.getGroupType()));
+        model.addAttribute("x", JSONUtil.toJSONString(x));
+        model.addAttribute("y", JSONUtil.toJSONString(y));
 
         return "chart/saleByBar";
     }

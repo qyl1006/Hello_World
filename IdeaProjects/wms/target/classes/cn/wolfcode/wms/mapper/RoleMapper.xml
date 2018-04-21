@@ -10,6 +10,10 @@
     <collection property="permissions" column="id"
                 ofType="permission"
                 select="cn.wolfcode.wms.mapper.PermissionMapper.selectByRoleId"/>
+
+    <!--查菜单-->
+    <collection property="menus" column="id" ofType="systemMenu"
+                select="cn.wolfcode.wms.mapper.SystemMenuMapper.selectSystemmenuByRoleId"/>
   </resultMap>
 
 

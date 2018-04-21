@@ -16,5 +16,8 @@ public class Role extends BaseDomain{
     //many-many
     private List<Permission> permissions = new ArrayList<>();
 
+    //many-many
+    private List<SystemMenu> menus = new ArrayList<>();
+
 
 }

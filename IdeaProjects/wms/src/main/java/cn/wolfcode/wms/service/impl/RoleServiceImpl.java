@@ -2,6 +2,7 @@ package cn.wolfcode.wms.service.impl;
 
 import cn.wolfcode.wms.domain.Role;
 import cn.wolfcode.wms.mapper.RoleMapper;
+import cn.wolfcode.wms.mapper.SystemMenuMapper;
 import cn.wolfcode.wms.query.PageResult;
 import cn.wolfcode.wms.query.QueryObject;
 import cn.wolfcode.wms.service.IRoleService;
@@ -14,23 +15,35 @@ import java.util.List;
 public class RoleServiceImpl implements IRoleService {
     @Autowired
     private RoleMapper roleMapper;
+    //菜单
+    @Autowired
+    private SystemMenuMapper systemMenuMapper;
 
 
     @Override
-    public void insertOrUpdate(Role entity, Long[] ids) {
+    public void insertOrUpdate(Role entity, Long[] ids, Long[] menuIds ) {
         if (entity.getId() == null) {
             roleMapper.insert(entity);
         }else{
-            //先删除旧关系
+            //先删除旧关系--权限
             roleMapper.deleteRelation(entity.getId());
+            //先删除旧关系--菜单
+            systemMenuMapper.deleteRelation(entity.getId());
 
             roleMapper.updateByPrimaryKey(entity);
         }
 
-        //维护关系
+        //维护关系--权限
         if (ids != null) {
             for (Long permissionId : ids) {
                 roleMapper.insertRelation(entity.getId(), permissionId);
+            }
+        }
+
+        //维护关系--菜单
+        if (menuIds != null) {
+            for (Long menuId : menuIds) {
+                systemMenuMapper.insertRelation(entity.getId(), menuId);
             }
         }
     }
@@ -39,6 +52,8 @@ public class RoleServiceImpl implements IRoleService {
     public void deleteById(Long id) {
         //先删除旧关系
         roleMapper.deleteRelation(id);
+        //先删除旧关系--菜单
+        systemMenuMapper.deleteRelation(id);
 
         roleMapper.deleteByPrimaryKey(id);
     }

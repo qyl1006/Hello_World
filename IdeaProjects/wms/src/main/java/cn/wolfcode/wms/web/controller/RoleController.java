@@ -5,6 +5,7 @@ import cn.wolfcode.wms.query.PageResult;
 import cn.wolfcode.wms.query.QueryObject;
 import cn.wolfcode.wms.service.IPermissionService;
 import cn.wolfcode.wms.service.IRoleService;
+import cn.wolfcode.wms.service.ISystemMenuService;
 import cn.wolfcode.wms.util.JSONResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,7 +20,9 @@ public class RoleController {
     private IRoleService roleService;
     @Autowired
     private IPermissionService permissionService;
-    
+    //菜单
+    @Autowired
+    private ISystemMenuService systemMenuService;
     
     @RequestMapping("list")
     public String list(QueryObject qo, Model model){
@@ -36,16 +39,18 @@ public class RoleController {
             Role entity = roleService.getById(id);
             model.addAttribute("entity", entity);
         }
-
+        //权限
         model.addAttribute("permissions", permissionService.listAll());
+        //菜单
+        model.addAttribute("menus", systemMenuService.selectAll());
         return "role/input";
     }
 
 
     @RequestMapping("saveOrUpdate")
     @ResponseBody
-    public Object saveOrUpdate(Role entity, Long[] ids){
-        roleService.insertOrUpdate(entity, ids);
+    public Object saveOrUpdate(Role entity, Long[] ids, Long[] menuIds){
+        roleService.insertOrUpdate(entity, ids, menuIds);
 
         return new JSONResult();
     }

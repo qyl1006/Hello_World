@@ -1,5 +1,6 @@
 package cn.wolfcode.wms.service.impl;
 
+import cn.wolfcode.wms.domain.Employee;
 import cn.wolfcode.wms.domain.SystemMenu;
 import cn.wolfcode.wms.mapper.SystemMenuMapper;
 import cn.wolfcode.wms.query.PageResult;
@@ -13,6 +14,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class SystemMenuServiceImpl implements ISystemMenuService {
@@ -85,6 +87,25 @@ public class SystemMenuServiceImpl implements ISystemMenuService {
         //反转集合
         Collections.reverse(menuDirs);
         return menuDirs;
+    }
+
+
+    //查所有菜单
+    @Override
+    public List<SystemMenu> selectAll() {
+        return systemMenuMapper.getAll();
+    }
+
+    //动态菜单显示功能 查所有子菜单
+    @Override
+    public List<Map<String, Object>> getMenuBySn(String menuSn) {
+        return systemMenuMapper.getMenuBySn(menuSn);
+    }
+
+//    /动态菜单显示功能 查当前用户所拥有的子菜单
+    @Override
+    public List<Map<String, Object>> getMenuBySnAndUser(String menuSn, Long employeeId) {
+        return systemMenuMapper.getMenuBySnAndUser(menuSn, employeeId);
     }
 
 

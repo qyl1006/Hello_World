@@ -7,7 +7,7 @@ import cn.wolfcode.wms.query.QueryObject;
 import java.util.List;
 
 public interface IRoleService {
-    void insertOrUpdate(Role entity, Long[] ids);
+    void insertOrUpdate(Role entity, Long[] ids, Long[] menuIds);
 
     void deleteById(Long id);
 

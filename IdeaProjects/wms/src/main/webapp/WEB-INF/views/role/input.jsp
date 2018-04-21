@@ -28,6 +28,7 @@
 
             $(".btn_submit").click(function () {
                 $(".select_permission option").prop("selected", true);
+                $(".select_menu option").prop("selected", true);
 
                 $("#editForm").submit();
             });
@@ -95,7 +96,7 @@
 						<table>
 							<tr>
 								<td>
-									<select multiple="true" class="all_permission">
+									<select multiple="true" class="ui_multiselect01 all_permission">
 										<c:forEach items="${permissions}" var="item">
 											<option value="${item.id}">${item.name}</option>
 										</c:forEach>
@@ -109,7 +110,7 @@
 									<input type="button" id="deselectAll" value="<==" class="left2right"/>
 								</td>
 								<td>
-									<select name="ids" multiple="true" class="select_permission">
+									<select name="ids" multiple="true" class="ui_multiselect01 select_permission">
 										<c:forEach items="${entity.permissions}" var="item">
 											<option  value="${item.id}">${item.name}</option>
 										</c:forEach>
@@ -118,6 +119,38 @@
 							</tr>
 						</table>
 					</td>
+				</tr>
+
+				<tr>
+					<td class="ui_text_rt" width="140">分配菜单
+					<td class="ui_text_lt">
+						<table>
+							<tr>
+								<td>
+									<select multiple="true" class="ui_multiselect01 all_menu">
+										<c:forEach items="${menus}" var="item">
+											<option value="${item.id}">${item.name}</option>
+										</c:forEach>
+									</select>
+
+								</td>
+								<td align="center">
+									<input type="button" id="selectMenu" value="-->" class="left2right"/><br/>
+									<input type="button" id="selectAllMenu" value="==>" class="left2right"/><br/>
+									<input type="button" id="deselectMenu" value="<--" class="left2right"/><br/>
+									<input type="button" id="deselectAllMenu" value="<==" class="left2right"/>
+								</td>
+								<td>
+									<select name="menuIds" multiple="true" class="ui_multiselect01 select_menu">
+										<c:forEach items="${entity.menus}" var="item">
+											<option  value="${item.id}">${item.name}</option>
+										</c:forEach>
+									</select>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
 
 				<tr>
 					<td>&nbsp;</td>
@@ -131,6 +164,8 @@
 
 			<script type="text/javascript">
 				$(function () {
+
+				    //权限操作
 					//去重
 					$(".select_permission option").each(function (i, e) {
 						$(".all_permission option").each(function (index, val) {
@@ -158,6 +193,37 @@
                     //左移动
                     $("#deselect").click(function () {
                         $(".select_permission option:selected").appendTo(".all_permission");
+                    });
+				//-----------------
+
+                    //菜单操作
+                    //去重
+                    $(".select_menu option").each(function (i, e) {
+                        $(".all_menu option").each(function (index, val) {
+                            if(e.value == val.value){
+                                $(val).remove();
+                            }
+                        })
+                    });
+
+                    //全部右移动
+                    $("#selectAllMenu").click(function () {
+                        $(".all_menu option").appendTo(".select_menu");
+                    });
+
+                    //移动左移动
+                    $("#deselectAllMenu").click(function () {
+                        $(".select_menu option").appendTo(".all_menu");
+                    });
+
+                    //右移动
+                    $("#selectMenu").click(function () {
+                        $(".all_menu option:selected").appendTo(".select_menu");
+                    });
+
+                    //左移动
+                    $("#deselectMenu").click(function () {
+                        $(".select_menu option:selected").appendTo(".all_menu");
                     });
 
 

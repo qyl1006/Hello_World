@@ -1,9 +1,11 @@
 package cn.wolfcode.wms.web.controller;
 
+import cn.wolfcode.wms.domain.Employee;
 import cn.wolfcode.wms.domain.SystemMenu;
 import cn.wolfcode.wms.query.ParentQueryObject;
 import cn.wolfcode.wms.service.ISystemMenuService;
 import cn.wolfcode.wms.util.JSONResult;
+import cn.wolfcode.wms.util.UserContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -70,11 +72,19 @@ public class SystemMenuController {
     }
 
 
-    @RequestMapping("test")
+    @RequestMapping("getmenusBySn")
     @ResponseBody
-    public Object test(String username){
-        System.out.println(username);
-        return new JSONResult();
+    public Object getmenusBySn(String menuSn){
+        //取出当前登陆用户
+        Employee emp = UserContext.getCurrentUser();
+
+        //如果是超级管理员  则查询出所有菜单
+        if (emp.isAdmin()) {
+            return systemMenuService.getMenuBySn(menuSn);
+        }
+        //或者查询出当前用户拥有的菜单
+
+        return systemMenuService.getMenuBySnAndUser(menuSn, emp.getId());
     }
 
 

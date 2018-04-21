@@ -25,7 +25,7 @@ $(function() {
 		$(this).addClass("selected");
 		$("#nav_module img").prop("src", "/images/common/module_"+ i+ ".png");
 
-		改变菜单
+		//改变菜单
 		var sn = $(this).data("rootmenu");
 		loadMenu(sn);
     });
@@ -60,15 +60,12 @@ var setting = {
 	//发送异步请求获取数据
 	async: {
 		enable: true,
-		url: "/systemmenu/getmenusBySn.do",
+		url: "/systemMenu/getmenusBySn.do",
 		autoParam: ["sn=menuSn"]
 	}
 };
 
-//加载菜单
-function loadMenu(sn) {
-	$.fn.zTree.init($("#dleft_tab1"), setting, zNode[sn]);
-}
+
 
 //菜单树
 var zNode = {
@@ -85,6 +82,10 @@ var zNode = {
 		{id:3, pId:0, name: "报表模块", sn: "chart", isParent: true}
 	]
 };
+//加载菜单
+function loadMenu(sn) {
+    $.fn.zTree.init($("#dleft_tab1"), setting, zNode[sn]);
+}
 
 
 //加载当前日期

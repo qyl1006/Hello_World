@@ -11,6 +11,7 @@
 
 	<script type="text/javascript" src="/plugins/My97DatePicker/WdatePicker.js"></script>
 	<script type="text/javascript" src="/plugins/artDialog/jquery.artDialog.js?skin=blue"></script>
+
 	<script type="text/javascript" src="/plugins/artDialog/iframeTools.js"></script>
 <script type="text/javascript" src="/js/commonAll.js"></script>
 <title>WMS- 销售报表
@@ -54,13 +55,13 @@
 							</select>
 							类型
 							<select id="groupType" class="ui_select01" name="groupType">
-								<option value="e.name">订货员</option>
+								<option value="e.name">销售员</option>
 								<option value="p.name">商品名称</option>
 								<option value="p.brandName">商品品牌</option>
 								<option value="c.name">客户</option>
 
-								<option value="DATE_FORMAT(s.vdate,'%Y-%m')">订货月份</option>
-								<option value="DATE_FORMAT(s.vdate,'%Y-%m-%d')">订货日期</option>
+								<option value="DATE_FORMAT(s.vdate,'%Y-%m')">销售月份</option>
+								<option value="DATE_FORMAT(s.vdate,'%Y-%m-%d')">销售日期</option>
 							</select>
 						</div>
 						<div id="box_bottom">
@@ -107,22 +108,24 @@
 							$("#searchForm").submit();
                         });
 
-
 						$(".chart").click(function () {
+						    var url = $(this).data("url") + "?" + $("#searchForm").serialize();
 
-                            console.log(1223);
-                            var url = $(this).data("url") + "?" + $("#searchForm").serialize();
-                            $.dialog.open(url, {
-                                title: "图形报表",
-                                width: "90%",
-                                height: "90%",
-                                left: '50%',
-                                top: '50%',
-                                lock: true,
-                                resize: false,
+							$.dialog.open(url, {
+								title: "销售报表",
+								width: "90%",
+								height: "90%",
+								left: '50%',
+								top: '50%',
+								lock: true,
+								resize: false
 
-                            });
-                        });
+							});
+
+
+						});
+
+
                         })
 					</script>
 			<div class="ui_content">

@@ -12,6 +12,8 @@
 	<script type="text/javascript" src="/js/system/index.js"></script>
 </head>
 <body>
+123
+
     <div id="top">
 		<div id="top_logo">
 			<img alt="logo" src="/images/common/logo.jpg" width="274" height="49" style="vertical-align:middle;">
