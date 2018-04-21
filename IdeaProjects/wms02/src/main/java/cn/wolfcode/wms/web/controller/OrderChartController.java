@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -62,5 +63,16 @@ public class OrderChartController {
         model.addAttribute("brands", brandService.listAll());
 
         return "chart/sale";
+    }
+
+
+    @RequestMapping("saleByBar")
+    public String saleByBar(@ModelAttribute("qo") OrderSaleQueryObject qo, Model model){
+//        List<Object> x = new ArrayList<>();
+//        List<Object> y = new ArrayList<>();
+//
+//        List<Map<String, Object>> maps = orderChartService.queryOrderSale(qo);
+
+        return "chart/saleByBar";
     }
 }

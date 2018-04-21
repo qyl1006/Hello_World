@@ -46,7 +46,7 @@
                 var tr = $(this).closest("tr");
 
 
-                $.dialog.open("/product/productListViews.do", {
+                $.dialog.open("/chart/saleByBar.do", {
                     title: "商品选择",
                     width: "90%",
                     height: "90%",

@@ -8,7 +8,10 @@
 <link href="/style/basic_layout.css" rel="stylesheet" type="text/css">
 <link href="/style/common_style.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="/js/jquery/jquery.js"></script>
+
 	<script type="text/javascript" src="/plugins/My97DatePicker/WdatePicker.js"></script>
+	<script type="text/javascript" src="/plugins/artDialog/jquery.artDialog.js?skin=blue"></script>
+	<script type="text/javascript" src="/plugins/artDialog/iframeTools.js"></script>
 <script type="text/javascript" src="/js/commonAll.js"></script>
 <title>WMS- 销售报表
 
@@ -62,6 +65,8 @@
 						</div>
 						<div id="box_bottom">
 							<input type="button" value="查询" class="ui_input_btn01 btn_submit"/>
+							<input type="button" value="柱状图" class="left2right chart" data-url="/chart/saleByBar.do">
+							<input type="button" value="饼状图" class="left2right chart" data-url="/chart/saleByBar.do">
 						</div>
 					</div>
 				</div>
@@ -102,6 +107,22 @@
 							$("#searchForm").submit();
                         });
 
+
+						$(".chart").click(function () {
+
+                            console.log(1223);
+                            var url = $(this).data("url") + "?" + $("#searchForm").serialize();
+                            $.dialog.open(url, {
+                                title: "图形报表",
+                                width: "90%",
+                                height: "90%",
+                                left: '50%',
+                                top: '50%',
+                                lock: true,
+                                resize: false,
+
+                            });
+                        });
                         })
 					</script>
 			<div class="ui_content">
@@ -119,6 +140,7 @@
 
 						<c:forEach items="${list}" var="item" varStatus="vs">
 							<tr>
+								<td><input type="checkbox"  class="acb" data-eid="${item.id}"/></td>
 								<td>${item.groupType}</td>
 								<td>${item.number}</td>
 								<td>${item.amount}</td>
