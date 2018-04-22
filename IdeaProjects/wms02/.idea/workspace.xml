@@ -241,10 +241,10 @@
   <component name="MavenRunner">
     <option name="jreName" value="1.8" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="4" />
-    <option name="y" value="42" />
-    <option name="width" value="1386" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="580" />
+    <option name="y" value="195" />
+    <option name="width" value="1382" />
     <option name="height" value="673" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -387,6 +387,17 @@
               <item name="wolfcode" type="462c0819:PsiDirectoryNode" />
               <item name="wms" type="462c0819:PsiDirectoryNode" />
               <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wms02" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wms02" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="wolfcode" type="462c0819:PsiDirectoryNode" />
+              <item name="wms" type="462c0819:PsiDirectoryNode" />
+              <item name="query" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wms02" type="b2602c69:ProjectViewProjectNode" />
@@ -564,12 +575,8 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="H:\Hello_World\IdeaProjects\wms02\src\main\webapp\WEB-INF\views\chart" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="H:\Hello_World\IdeaProjects\wms02\src\main\webapp\WEB-INF" />
-      <recent name="H:\Hello_World\IdeaProjects\wms02\src\main\webapp\plugins\echarts" />
-      <recent name="H:\Hello_World\IdeaProjects\wms02\src\main\resources\cn\wolfcode\wms\mapper" />
-      <recent name="H:\Hello_World\IdeaProjects\wms02\src\main\webapp\WEB-INF\views" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="cn.wolfcode.wms.query" />
@@ -578,8 +585,12 @@
       <recent name="cn.wolfcode.wms.service.impl" />
       <recent name="cn.wolfcode.wms.service" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\Hello_World\IdeaProjects\wms02\src\main\webapp\WEB-INF\views\chart" />
       <recent name="H:\Hello_World\IdeaProjects\wms02\src\main\webapp\WEB-INF" />
+      <recent name="H:\Hello_World\IdeaProjects\wms02\src\main\webapp\plugins\echarts" />
+      <recent name="H:\Hello_World\IdeaProjects\wms02\src\main\resources\cn\wolfcode\wms\mapper" />
+      <recent name="H:\Hello_World\IdeaProjects\wms02\src\main\webapp\WEB-INF\views" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -797,12 +808,12 @@
       <workItem from="1524287477442" duration="11688000" />
       <workItem from="1524310338848" duration="316000" />
       <workItem from="1524320879265" duration="2115000" />
-      <workItem from="1524363347398" duration="20404000" />
+      <workItem from="1524363347398" duration="21394000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="289575000" />
+    <option name="totallyTimeSpent" value="290565000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -814,7 +825,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -831,7 +842,7 @@
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298791" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26291794" sideWeight="0.47457626" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32598785" sideWeight="0.47457626" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2781155" sideWeight="0.5254237" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1306,8 +1317,8 @@
         <state relative-caret-position="1445">
           <caret line="162" column="16" lean-forward="false" selection-start-line="162" selection-start-column="16" selection-end-line="162" selection-end-column="16" />
           <folding>
-            <element signature="e#4234#4235#0" expanded="true" />
-            <element signature="e#4295#4296#0" expanded="true" />
+            <element signature="e#4234#4235#0" expanded="false" />
+            <element signature="e#4295#4296#0" expanded="false" />
           </folding>
         </state>
       </provider>
