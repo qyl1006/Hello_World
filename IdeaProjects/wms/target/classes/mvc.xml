@@ -51,4 +51,11 @@
 			<!--</value>-->
 		<!--</property>-->
 	<!--</bean>-->
+
+	<!--文件上传的解析器 id不能乱写-->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSizePerFile" value="#{1024 * 1024 * 1024}"/>
+
+	</bean>
+
 </beans>
