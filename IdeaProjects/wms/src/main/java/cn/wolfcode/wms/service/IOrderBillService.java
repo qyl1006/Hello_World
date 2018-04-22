@@ -17,4 +17,5 @@ public interface IOrderBillService {
     //分页
     PageResult queryAll(OrderBillQueryObject qo);
 
+    void updataAuditorById(Long id);
 }

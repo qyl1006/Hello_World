@@ -42,6 +42,17 @@ public class ProductController {
         return "product/list";
     }
 
+    @RequestMapping("productListViews")
+    public String listViews(@ModelAttribute("qo") ProductQueryObject qo, Model model){
+        qo.setPageSize(20);
+        PageResult result = productService.queryAll(qo);
+        model.addAttribute("result", result);
+
+        //品牌
+        model.addAttribute("brands", brandService.listAll());
+        return "product/productListViews";
+    }
+
 
     @RequestMapping("input")
     public String input(Long id, Model model){

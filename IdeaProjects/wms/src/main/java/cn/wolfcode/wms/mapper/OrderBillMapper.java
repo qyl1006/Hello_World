@@ -18,4 +18,11 @@ public interface OrderBillMapper {
     //分页/高级查询
     int queryCount(OrderBillQueryObject qo);
     List<OrderBill> selectAll(OrderBillQueryObject qo);
+
+
+    //主要用于操作业务层检查订单是否审核状态的--更新订单用
+    OrderBill selectCheckStatusById(Long id);
+
+    //审核
+    void updateAuditorById(OrderBill old);
 }

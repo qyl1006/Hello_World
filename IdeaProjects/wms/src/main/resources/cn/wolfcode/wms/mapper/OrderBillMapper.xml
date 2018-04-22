@@ -35,66 +35,93 @@
     delete from orderbill
     where id = #{id}
   </delete>
+
   <insert id="insert" keyProperty="id" useGeneratedKeys="true">
-    insert into orderbill (sn, vdate, status, totalAmount, totalNumber, auditTime, 
-      inputTime, inputUser_id, auditor_id, supplier_id)
-    values (#{sn}, #{vdate}, #{status}, #{totalAmount}, #{totalNumber}, #{auditTime}, 
-      #{inputTime}, #{inputUser.id}, #{auditor.id}, #{supplier.id})
+    insert into orderbill (sn, vdate, status, totalAmount, totalNumber,
+      inputTime, inputUser_id, supplier_id)
+    values (#{sn}, #{vdate}, #{status}, #{totalAmount}, #{totalNumber},
+      #{inputTime}, #{inputUser.id}, #{supplier.id})
   </insert>
+
   <update id="updateByPrimaryKey">
     update orderbill
     set sn = #{sn},
       vdate = #{vdate},
-      status = #{status},
+
       totalAmount = #{totalAmount},
       totalNumber = #{totalNumber},
-      auditTime = #{auditTime},
-      inputTime = #{inputTime},
-      inputUser_id = #{inputUser.id},
-      auditor_id = #{auditor.id},
+
       supplier_id = #{supplier.id}
     where id = #{id}
   </update>
-  <select id="selectByPrimaryKey" resultType="orderBill">
-    select id, sn, vdate, status, totalAmount, totalNumber, auditTime, inputTime, inputUser_id, 
-    auditor_id, supplier_id
-    from orderbill
-    where id = #{id}
+
+  <!--审核更新-->
+  <update id="updateAuditorById" parameterType="orderBill">
+      update orderbill set status = #{status}, auditTime = #{auditTime}, auditor_id = #{auditor.id}
+  </update>
+
+  <resultMap id="selectOne_map" type="orderBill">
+    <id column="id" property="id"/>
+    <result column="sn" property="sn"/>
+    <result column="vdate" property="vdate"/>
+    
+    <!--供应商-->
+    <association property="supplier" column="supplier_id" javaType="supplier" columnPrefix="s_">
+      <id column="id" property="id"/>
+      <result column="name" property="name"/>
+    </association>
+
+    <!--发额外sql查订单明细-->
+    <collection property="items" column="id" ofType="orderBillItem"
+                select="cn.wolfcode.wms.mapper.OrderBillItemMapper.selectByBillId"/>
+  </resultMap>
+  <select id="selectByPrimaryKey" resultMap="selectOne_map">
+    select bill.id, bill.sn, bill.vdate,
+            s.id s_id, s.name s_name
+
+      from orderbill bill
+      join supplier s on s.id = bill.supplier_id
+     where bill.id = #{id}
   </select>
 
 
 
   <sql id="base_where">
-    <if test="beginDate != null">
-      and bill.vdate &gt;= #{beginDate}
-    </if>
-    <if test="endDate != null">
-      and bill.vdate &lt;= #{endDate}
-    </if>
-    <if test="supplierId > 0">
-      and bill.supplier_id = #{supplierId}
-    </if>
-    <if test="status > 0">
-      and bill.status = #{status}
-    </if>
-
+    <where>
+        <if test="beginDate != null">
+          and bill.vdate &gt;= #{beginDate}
+        </if>
+        <if test="endDate != null">
+          and bill.vdate &lt;= #{endDate}
+        </if>
+        <if test="supplierId > 0">
+          and bill.supplier_id = #{supplierId}
+        </if>
+        <if test="status > 0">
+          and bill.status = #{status}
+        </if>
+    </where>
   </sql>
   <select id="queryCount" resultType="int" parameterType="cn.wolfcode.wms.query.OrderBillQueryObject">
-    select count(*) from bill
+    select count(*) from orderbill bill
     <include refid="base_where"/>
   </select>
 
   <select id="selectAll" resultMap="BaseResultMap">
-    select bill.id, bill.sn, bill.status, bill.totalNumber, bill.Amount,
-            auditUser.id as_id, auditUser.name as_name,
+    select bill.id, bill.sn, bill.vdate, bill.status, bill.totalNumber, bill.totalAmount,
+            auditorUser.id as_id, auditorUser.name as_name,
             inputUser.id iu_id, inputUser.name iu_name,
-            p.id p_id, p.name p_name
+            s.id s_id, s.name s_name
       from orderbill bill
-      left join employee auditorUser on auditorUser.id = bill.auditorUser_id
+      left join employee auditorUser on auditorUser.id = bill.auditor_id
       join employee inputUser on inputUser.id = bill.inputUser_id
       join supplier s on s.id = bill.supplier_id
       <include refid="base_where"/>
-    limit #{status}, #{pageSize}
+    limit #{start}, #{pageSize}
+  </select>
+
+  <select id="selectCheckStatusById" resultType="orderBill">
+    select id, status, totalAmount, totalNumber, supplier_id from orderbill where id = #{id}
   </select>
 
 </mapper>

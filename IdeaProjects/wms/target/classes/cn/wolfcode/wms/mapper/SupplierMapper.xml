@@ -34,7 +34,7 @@
   </select>
 
   <select id="selectAll" resultMap="BaseResultMap">
-    select id, name, sn
+    select id, name, phone, address
     from supplier
   </select>
 

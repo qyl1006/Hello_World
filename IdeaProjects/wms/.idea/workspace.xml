@@ -30,46 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="IOrderBillService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/IOrderBillService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderBillServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/impl/OrderBillServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="42" column="22" lean-forward="false" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
-              <folding>
-                <element signature="e#867#868#0" expanded="true" />
-                <element signature="e#921#922#0" expanded="true" />
-                <element signature="e#976#977#0" expanded="true" />
-                <element signature="e#1037#1038#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderBillController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/web/controller/OrderBillController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="33" column="67" lean-forward="false" selection-start-line="33" selection-start-column="67" selection-end-line="33" selection-end-column="67" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="list.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orderBill/list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="37" column="59" lean-forward="false" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="59" />
+            <state relative-caret-position="234">
+              <caret line="75" column="68" lean-forward="false" selection-start-line="75" selection-start-column="68" selection-end-line="75" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -90,10 +55,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ui_multiselect01</find>
-      <find>btn_batchDelete</find>
-      <find>ui_input_btn01</find>
-      <find>btn_input</find>
       <find>all</find>
       <find>result</find>
       <find>result.data</find>
@@ -113,13 +74,17 @@
       <find>saveOrUpdate`</find>
       <find>Employee</find>
       <find>商品管理</find>
-      <find>员工</find>
-      <find>btn_submit</find>
       <find>_id}</find>
-      <find>department</find>
-      <find>Department</find>
       <find>账户</find>
       <find>employee</find>
+      <find>员工</find>
+      <find>edit_table_body</find>
+      <find>searchproduct</find>
+      <find>删除</find>
+      <find>btn_submit</find>
+      <find>Department</find>
+      <find>department</find>
+      <find>supplierId</find>
     </findStrings>
     <replaceStrings>
       <replace>employee</replace>
@@ -147,8 +112,10 @@
       <replace>product</replace>
       <replace>.id}</replace>
       <replace>OrderBill</replace>
-      <replace>采购订单</replace>
       <replace>orderBill</replace>
+      <replace>采购订单</replace>
+      <replace>OrderBillItem</replace>
+      <replace>orderbillitem</replace>
     </replaceStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -159,11 +126,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/main.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/domain/Role.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/RoleMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/RoleMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/web/controller/RoleController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/role/input.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/IRoleService.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/impl/RoleServiceImpl.java" />
@@ -187,29 +149,34 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/web/controller/SupplierController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/supplier/list.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/supplier/input.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/SupplierMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/ProductMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/ProductMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/IProductService.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/impl/ProduectServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/employee/input.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/query/ProductQueryObject.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/domain/Product.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/product/input.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/mvc.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/web/controller/ProductController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/product/list.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/domain/OrderBill.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/domain/OrderBillItem.java" />
         <option value="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/OrderBillMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/base_where.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/query/OrderBillQueryObject.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/SupplierMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/domain/Product.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/web/controller/ProductController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/product/productListViews.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orderBill/input.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/OrderBillItemMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/OrderBillItemMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orderBill/view.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/IOrderBillService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/web/controller/OrderBillController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/OrderBillMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/OrderBillMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/impl/OrderBillServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/IOrderBillService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orderBill/list.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/web/controller/OrderBillController.java" />
       </list>
     </option>
   </component>
@@ -271,10 +238,10 @@
   <component name="MavenRunner">
     <option name="jreName" value="1.8" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="109" />
-    <option name="y" value="63" />
-    <option name="width" value="1382" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="4" />
+    <option name="y" value="42" />
+    <option name="width" value="1386" />
     <option name="height" value="673" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -315,6 +282,9 @@
             <id>Numeric issuesJava</id>
           </State>
           <State>
+            <id>Probable bugsJava</id>
+          </State>
+          <State>
             <id>Spring</id>
           </State>
           <State>
@@ -324,6 +294,11 @@
             <id>Threading issuesJava</id>
           </State>
         </expanded-state>
+        <selected-state>
+          <State>
+            <id>Portability issuesJava</id>
+          </State>
+        </selected-state>
       </profile-state>
     </entry>
   </component>
@@ -608,6 +583,16 @@
               <item name="wms" type="b2602c69:ProjectViewProjectNode" />
               <item name="wms" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="product" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wms" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -655,18 +640,18 @@
       <recent name="H:\Hello_World\IdeaProjects\wms\src\main\webapp" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.wolfcode.wms.mapper" />
       <recent name="cn.wolfcode.wms.web.controller" />
       <recent name="cn.wolfcode.wms.service.impl" />
       <recent name="cn.wolfcode.wms.service" />
       <recent name="cn.wolfcode.wms.query" />
-      <recent name="cn.wolfcode.wms.domain" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="H:\Hello_World\IdeaProjects\wms\src\main\webapp\WEB-INF\views" />
+      <recent name="H:\Hello_World\IdeaProjects\wms\src\main\webapp\WEB-INF\views\orderBill" />
       <recent name="H:\Hello_World\IdeaProjects\wms\src\main\resources\cn\wolfcode\wms\mapper" />
+      <recent name="H:\Hello_World\IdeaProjects\wms\src\main\webapp\WEB-INF\views\product" />
+      <recent name="H:\Hello_World\IdeaProjects\wms\src\main\webapp\WEB-INF\views" />
       <recent name="H:\Hello_World\IdeaProjects\wms\src\main\webapp\WEB-INF" />
-      <recent name="H:\Hello_World\IdeaProjects\wms\src\main\java\cn\wolfcode\wms\util" />
-      <recent name="H:\Hello_World\IdeaProjects\wms\src\main\webapp\plugins" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -788,6 +773,7 @@
     <configuration name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.76" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
         <artifact name="wms:war exploded">
           <settings>
@@ -919,7 +905,7 @@
       <workItem from="1524307486920" duration="145000" />
       <workItem from="1524307705886" duration="972000" />
       <workItem from="1524308964261" duration="18860000" />
-      <workItem from="1524362185358" duration="13861000" />
+      <workItem from="1524362185358" duration="35990000" />
     </task>
     <servers />
   </component>
@@ -941,16 +927,16 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164157000" />
+    <option name="totallyTimeSpent" value="186286000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="109" y="63" width="1382" height="673" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2867012" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28543308" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28842834" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -962,13 +948,13 @@
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938388" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908705" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31382978" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26139817" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4265976" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3540587" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1022,17 +1008,29 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/web/controller/ProductController.java</url>
-          <line>89</line>
+          <line>100</line>
           <properties />
           <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/impl/OrderBillServiceImpl.java</url>
+          <line>82</line>
+          <properties />
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/impl/OrderBillServiceImpl.java</url>
+          <line>149</line>
+          <properties />
+          <option name="timeStamp" value="71" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="56" />
+      <option name="time" value="72" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
@@ -1050,136 +1048,10 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/system/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="74" column="6" lean-forward="true" selection-start-line="74" selection-start-column="6" selection-end-line="74" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/ISystemMenuService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="32" column="79" lean-forward="false" selection-start-line="32" selection-start-column="69" selection-end-line="32" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/impl/SystemMenuServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="107" column="44" lean-forward="false" selection-start-line="107" selection-start-column="44" selection-end-line="107" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/SystemMenuMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="49" column="66" lean-forward="false" selection-start-line="49" selection-start-column="66" selection-end-line="49" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/SystemMenuMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="121" column="27" lean-forward="true" selection-start-line="121" selection-start-column="27" selection-end-line="121" selection-end-column="27" />
-          <folding>
-            <marker date="1524327011463" expanded="true" signature="701:744" ph="delete from systemmenu... " />
-            <marker date="1524327011463" expanded="true" signature="825:924" ph="insert into systemmenu... " />
-            <marker date="1524327011463" expanded="true" signature="1000:1070" ph="insert into role_menu... " />
-            <marker date="1524327011463" expanded="true" signature="1123:1254" ph="update systemmenu... " />
-            <marker date="1524327011463" expanded="true" signature="1332:1408" ph="select id, n... systemmenu" />
-            <marker date="1524327011463" expanded="true" signature="2009:2085" ph="select id, n... systemmenu" />
-            <marker date="1524327011463" expanded="true" signature="2407:2603" ph="SELECT child... systemmenu" />
-            <marker date="1524327011463" expanded="true" signature="2722:2923" ph="select child... systemmenu" />
-            <marker date="1524327011463" expanded="true" signature="3030:3145" ph="select id, n... systemmenu" />
-            <marker date="1524327011463" expanded="true" signature="3084:3139" ph="select menu_... role_menu" />
-            <marker date="1524327011463" expanded="true" signature="3231:3290" ph="select id, n... systemmenu" />
-            <marker date="1524327011463" expanded="true" signature="3364:3411" ph="delete from role_menu... " />
-            <marker date="1524327011463" expanded="true" signature="3473:3662" ph="select child... " />
-            <marker date="1524327011463" expanded="true" signature="3763:4056" ph="select child... " />
-            <marker date="1524327011463" expanded="true" signature="3763:4091" ph="select child... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/web/controller/SystemMenuController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="86" column="46" lean-forward="true" selection-start-line="86" selection-start-column="46" selection-end-line="86" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/domain/Brand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/web/controller/BrandController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-56">
-          <caret line="42" column="41" lean-forward="false" selection-start-line="42" selection-start-column="41" selection-end-line="42" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/brand/list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-40">
-          <caret line="61" column="34" lean-forward="false" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/brand/input.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="668">
-          <caret line="62" column="39" lean-forward="false" selection-start-line="62" selection-start-column="39" selection-end-line="62" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/SupplierMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="26" lean-forward="false" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
-          <folding>
-            <marker date="1524328965556" expanded="true" signature="514:526" ph="delete from department... " />
-            <marker date="1524328965556" expanded="true" signature="514:555" ph="delete from supplier... " />
-            <marker date="1524328965556" expanded="true" signature="637:723" ph="insert into supplier... " />
-            <marker date="1524328965556" expanded="true" signature="776:887" ph="update supplier... " />
-            <marker date="1524328965556" expanded="true" signature="966:1036" ph="select id, n... supplier" />
-            <marker date="1524328965556" expanded="true" signature="1106:1143" ph="select id, n... supplier" />
-            <marker date="1524328965556" expanded="true" signature="1276:1305" ph="select count... supplier" />
-            <marker date="1524328965556" expanded="true" signature="1420:1494" ph="select id, n... supplier" />
-            <marker date="1524328965556" expanded="true" signature="1466:1494" ph="select id, n... department" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.2.4.RELEASE/spring-aop-4.2.4.RELEASE-sources.jar!/org/springframework/aop/support/AopUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4662">
-          <caret line="303" column="0" lean-forward="false" selection-start-line="303" selection-start-column="0" selection-end-line="303" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/web/controller/SupplierController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="43" column="34" lean-forward="false" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.2.4.RELEASE/spring-web-4.2.4.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3528">
-          <caret line="227" column="0" lean-forward="false" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1204,14 +1076,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/SupplierMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -1289,14 +1153,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/domain/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="29" column="31" lean-forward="false" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/product/input.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
@@ -1326,12 +1182,12 @@
         <state relative-caret-position="104">
           <caret line="34" column="39" lean-forward="false" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
           <folding>
-            <element signature="e#776#777#0" expanded="true" />
-            <element signature="e#826#827#0" expanded="true" />
-            <element signature="e#877#878#0" expanded="true" />
-            <element signature="e#934#935#0" expanded="true" />
-            <element signature="e#984#985#0" expanded="true" />
-            <element signature="e#1030#1031#0" expanded="true" />
+            <element signature="e#776#777#0" expanded="false" />
+            <element signature="e#826#827#0" expanded="false" />
+            <element signature="e#877#878#0" expanded="false" />
+            <element signature="e#934#935#0" expanded="false" />
+            <element signature="e#984#985#0" expanded="false" />
+            <element signature="e#1030#1031#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1382,22 +1238,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/web/controller/ProductController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/domain/OrderBillItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="23" column="24" lean-forward="false" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -1460,87 +1300,239 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/domain/OrderBill.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/OrderBillMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/query/OrderBillQueryObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="21" column="34" lean-forward="false" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+        <state relative-caret-position="108">
+          <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
           <folding>
-            <element signature="e#606#607#0" expanded="true" />
-            <element signature="e#657#658#0" expanded="true" />
+            <element signature="e#606#607#0" expanded="false" />
+            <element signature="e#657#658#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/OrderBillMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/SupplierMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="66" column="11" lean-forward="false" selection-start-line="66" selection-start-column="11" selection-end-line="66" selection-end-column="11" />
-          <folding>
-            <element signature="e#2539#2543#0" expanded="true" />
-            <element signature="e#2621#2625#0" expanded="true" />
-            <marker date="1524380682828" expanded="true" signature="1394:1436" ph="delete from orderbill... " />
-            <marker date="1524380682828" expanded="true" signature="1517:1771" ph="insert into orderbill... " />
-            <marker date="1524380682828" expanded="true" signature="1517:1807" ph="insert into orderbill... " />
-            <marker date="1524380682828" expanded="true" signature="1859:2209" ph="update orderbill... " />
-            <marker date="1524380682828" expanded="true" signature="2185:2209" ph="update orderbill... " />
-            <marker date="1524380682828" expanded="true" signature="2284:2444" ph="select id, s... orderbill" />
-            <marker date="1524380682828" expanded="true" signature="2920:2945" ph="select count... bill" />
-            <marker date="1524380682828" expanded="true" signature="3049:3473" ph="select bill.... orderbill" />
-            <marker date="1524380682828" expanded="true" signature="3049:3484" ph="select bill.... orderbill" />
-            <marker date="1524380682828" expanded="true" signature="3049:3553" ph="select bill.... orderbill" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/IOrderBillService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        <state relative-caret-position="234">
+          <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/impl/OrderBillServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/SupplierMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="42" column="22" lean-forward="false" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
+        <state relative-caret-position="550">
+          <caret line="36" column="35" lean-forward="false" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
           <folding>
-            <element signature="e#867#868#0" expanded="true" />
-            <element signature="e#921#922#0" expanded="true" />
-            <element signature="e#976#977#0" expanded="true" />
-            <element signature="e#1037#1038#0" expanded="true" />
+            <marker date="1524382202433" expanded="true" signature="514:526" ph="delete from department... " />
+            <marker date="1524382202433" expanded="true" signature="514:555" ph="delete from supplier... " />
+            <marker date="1524382202433" expanded="true" signature="637:723" ph="insert into supplier... " />
+            <marker date="1524382202433" expanded="true" signature="776:887" ph="update supplier... " />
+            <marker date="1524382202433" expanded="true" signature="966:1036" ph="select id, n... supplier" />
+            <marker date="1524382202433" expanded="true" signature="1106:1155" ph="select id, n... supplier" />
+            <marker date="1524382202433" expanded="true" signature="1288:1317" ph="select count... supplier" />
+            <marker date="1524382202433" expanded="true" signature="1432:1506" ph="select id, n... supplier" />
+            <marker date="1524382202433" expanded="true" signature="1478:1506" ph="select id, n... department" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orderBill/list.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/product/productListViews.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="37" column="59" lean-forward="false" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="59" />
+        <state relative-caret-position="263">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.2.4.RELEASE/spring-web-4.2.4.RELEASE-sources.jar!/org/springframework/web/multipart/MultipartFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="33" column="25" lean-forward="true" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/web/controller/ProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="79" column="25" lean-forward="true" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/commonAll.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/domain/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/domain/OrderBillItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/domain/OrderBill.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="46" column="12" lean-forward="false" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orderBill/input.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="230" column="77" lean-forward="false" selection-start-line="230" selection-start-column="77" selection-end-line="230" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.2.4.RELEASE/spring-aop-4.2.4.RELEASE-sources.jar!/org/springframework/aop/support/AopUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="306" column="0" lean-forward="false" selection-start-line="306" selection-start-column="0" selection-end-line="306" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/4.2.4.RELEASE/spring-tx-4.2.4.RELEASE-sources.jar!/org/springframework/transaction/interceptor/TransactionAspectSupport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="288" column="0" lean-forward="false" selection-start-line="288" selection-start-column="0" selection-end-line="288" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.2.4.RELEASE/spring-aop-4.2.4.RELEASE-sources.jar!/org/springframework/aop/interceptor/ExposeInvocationInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="88" column="47" lean-forward="true" selection-start-line="88" selection-start-column="47" selection-end-line="88" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.2.4.RELEASE/spring-aop-4.2.4.RELEASE-sources.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="232" column="0" lean-forward="false" selection-start-line="232" selection-start-column="0" selection-end-line="232" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.2.4.RELEASE/spring-web-4.2.4.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="229" column="0" lean-forward="false" selection-start-line="229" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orderBill/view.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="165" column="95" lean-forward="false" selection-start-line="165" selection-start-column="95" selection-end-line="165" selection-end-column="95" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/web/controller/OrderBillController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="33" column="67" lean-forward="false" selection-start-line="33" selection-start-column="67" selection-end-line="33" selection-end-column="67" />
+        <state relative-caret-position="107">
+          <caret line="78" column="35" lean-forward="false" selection-start-line="78" selection-start-column="35" selection-end-line="78" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/IOrderBillService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/OrderBillItemMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="2" lean-forward="false" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+          <folding>
+            <marker date="1524403700533" expanded="true" signature="275:287" ph="delete from department... " />
+            <marker date="1524403700533" expanded="true" signature="275:330" ph="delete from orderbillitem... " />
+            <marker date="1524403700533" expanded="true" signature="412:591" ph="insert into orderbillitem... " />
+            <marker date="1524403700533" expanded="true" signature="437:591" ph="insert into department... " />
+            <marker date="1524403700533" expanded="true" signature="1228:1479" ph="select bill.... orderbillitem" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/OrderBillItemMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/service/impl/OrderBillServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="125" column="37" lean-forward="true" selection-start-line="125" selection-start-column="37" selection-end-line="125" selection-end-column="37" />
+          <folding>
+            <element signature="e#3865#3866#0" expanded="true" />
+            <element signature="e#3926#3927#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wolfcode/wms/mapper/OrderBillMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/cn/wolfcode/wms/mapper/OrderBillMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="33" column="2" lean-forward="false" selection-start-line="33" selection-start-column="2" selection-end-line="33" selection-end-column="2" />
+          <folding>
+            <element signature="e#3138#3142#0" expanded="true" />
+            <element signature="e#3232#3236#0" expanded="true" />
+            <marker date="1524405774742" expanded="true" signature="1394:1436" ph="delete from orderbill... " />
+            <marker date="1524405774742" expanded="true" signature="1518:1733" ph="insert into orderbill... " />
+            <marker date="1524405774742" expanded="true" signature="1518:1754" ph="insert into orderbill... " />
+            <marker date="1524405774742" expanded="true" signature="1807:1997" ph="update orderbill... " />
+            <marker date="1524405774742" expanded="true" signature="1973:1997" ph="update orderbill... " />
+            <marker date="1524405774742" expanded="true" signature="2091:2184" ph="update orderbill... " />
+            <marker date="1524405774742" expanded="true" signature="2847:3023" ph="select id, s... orderbill" />
+            <marker date="1524405774742" expanded="true" signature="3571:3606" ph="select count... bill" />
+            <marker date="1524405774742" expanded="true" signature="3710:4151" ph="select bill.... orderbill" />
+            <marker date="1524405774742" expanded="true" signature="3710:4162" ph="select bill.... orderbill" />
+            <marker date="1524405774742" expanded="true" signature="3710:4230" ph="select bill.... orderbill" />
+            <marker date="1524405774742" expanded="true" signature="4309:4397" ph="select id, s... orderbill" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orderBill/list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="75" column="68" lean-forward="false" selection-start-line="75" selection-start-column="68" selection-end-line="75" selection-end-column="68" />
           <folding />
         </state>
       </provider>

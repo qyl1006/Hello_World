@@ -43,14 +43,31 @@ public class OrderBillController {
             model.addAttribute("entity", entity);
         }
 
+        //供应商
+        model.addAttribute("suppliers", supplierService.listAll());
         return "orderBill/input";
+    }
+
+    @RequestMapping("view")
+    public String view(Long id, Model model){
+        if (id != null) {
+            OrderBill entity = orderBillService.getById(id);
+            model.addAttribute("entity", entity);
+        }
+
+        //供应商
+        model.addAttribute("suppliers", supplierService.listAll());
+        return "orderBill/view";
     }
 
 
     @RequestMapping("saveOrUpdate")
     @ResponseBody
     public Object saveOrUpdate(OrderBill entity){
-        orderBillService.insertOrUpdate(entity);
+        if (entity != null) {
+
+            orderBillService.insertOrUpdate(entity);
+        }
 
         return new JSONResult();
     }
@@ -65,5 +82,14 @@ public class OrderBillController {
         return  new JSONResult();
     }
 
+    @RequestMapping("auditor")
+    public String auditor(Long id){
+        if (id != null) {
+
+            orderBillService.updataAuditorById(id);
+        }
+
+        return "redirect:/orderBill/list.do";
+    }
 
 }

@@ -1,10 +1,13 @@
 package cn.wolfcode.wms.domain;
 
+import cn.wolfcode.wms.util.JSONUtil;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.util.StringUtils;
 
 import java.math.BigDecimal;
+import java.util.HashMap;
+import java.util.Map;
 
 @Getter @Setter
 public class Product extends BaseDomain{
@@ -35,6 +38,18 @@ public class Product extends BaseDomain{
             return filename + "_small" + ext;
         }
         return  null;
+    }
+
+    //把当前对象中的部分信息转为JSON
+    public String getJsonString(){
+        Map<String, Object> map = new HashMap<>();
+        map.put("id", id);
+        map.put("name", name);
+        map.put("costPrice", costPrice);
+        map.put("salePrice", salePrice);
+        map.put("brandName", brandName);
+
+        return JSONUtil.toJSONString(map);
     }
 
 }

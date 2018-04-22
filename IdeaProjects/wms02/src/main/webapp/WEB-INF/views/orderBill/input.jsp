@@ -38,15 +38,13 @@
                 tr.appendTo("#edit_table_body");
             });
 
-
-
             //统一事件绑定
 			$("#edit_table_body").on("click", ".searchproduct", function () {
                 //获取当前行
                 var tr = $(this).closest("tr");
 
 
-                $.dialog.open("/chart/saleByBar.do", {
+                $.dialog.open("/product/productListViews.do", {
                     title: "商品选择",
                     width: "90%",
                     height: "90%",
@@ -75,7 +73,7 @@
                 });
 
 
-            } ).on("blur", "input[tag='costPrice", function () {
+            } ).on("blur", "input[tag='costPrice'],input[tag='number']", function () {
                 //得到当前行
                 var tr =$(this).closest("tr");
 
@@ -96,32 +94,6 @@
                 tr.remove();
             })
 
-
-
-
-            // //对于单价和数量文本框 绑定失去焦点事件 重新计算小计
-            // $("input[tag='costPrice'],input[tag='number']").blur(function () {
-				//
-            // });
-
-            //
-            // //删除功能, 删除当前所在的行
-            // $(".removeItem").click(function () {
-            //
-            // });
-
-
-
-            //
-            // //放大镜按钮
-            // $(".searchproduct").click(function () {
-            //
-            // });
-
-
-
-
-
             //日期插件
 			$(".Wdate").click(function () {
                 WdatePicker({isShowClear:true,readOnly:true,lang:'zh-cn'})
@@ -136,7 +108,6 @@
 
 
 			$(".btn_submit").click(function () {
-                console.log(123);
                 //修改明细的参数名称的索引
 			    $.each($("#edit_table_body tr"), function (index, tr) {
 			        //找到4个提交到后台的参数
@@ -266,12 +237,7 @@
 											</td>
 										</tr>
 									</c:forEach>
-
-
-
-
 								</c:when>
-
 
 								<%--新增时 显示静态一行明细--%>
 								<c:otherwise>
@@ -292,9 +258,6 @@
 									</tr>
 								</c:otherwise>
 							</c:choose>
-
-
-
 
 							</tbody>
 						</table>

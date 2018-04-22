@@ -11,9 +11,34 @@
 <script type="text/javascript" src="/js/jquery/jquery.js"></script>
 
 <script type="text/javascript" src="/plugins/artDialog/jquery.artDialog.js?skin=blue"></script>
+	<script type="text/javascript" src="/plugins/My97DatePicker/WdatePicker.js"></script>
 
 
 <script type="text/javascript" src="/js/commonAll.js"></script>
+
+	<script type="text/javascript">
+		$(function () {
+            //处理开始时间
+            $("input[name='beginDate']").click(function () {
+                WdatePicker({
+                        readOnly: true,
+                        lang:'zh-cn',
+                        maxDate: new Date()
+                    })
+            });
+
+            //处理结束时间
+            $("input[name='endDate']").click(function () {
+                WdatePicker({
+                        readOnly: true,
+                        lang:'zh-cn',
+                        minDate: $("input[name='beginDate']").val(),
+                        maxDate: new Date()
+                    })
+            });
+        });
+	</script>
+
 <title>WMS-采购订单管理</title>
 <style>
 	.alt td{ background:black !important;}
@@ -35,7 +60,7 @@
 							供应商
 							<select id="supplierId" class="ui_select01" name="supplierId">
 									<option value="-1">全部供应商</option>
-								<c:forEach items="suppliers" var="item">
+								<c:forEach items="${suppliers}" var="item">
 									<option value="${item.id}">${item.name}</option>
 								</c:forEach>
 
@@ -47,23 +72,17 @@
 								<option value="2">已审核</option>
 							</select>
 							<script>
-                                $("#supplierId option[value='-1']").prop("selected",true);
-                                $("#status option[value='-1']").prop("selected",true);
+                                $("#supplierId option[value='${qo.supplierId}']").prop("selected",true);
+                                $("#status option[value='${qo.status}']").prop("selected",true);
 							</script>
 						</div>
 
-						<script type="text/javascript">
-							//回显
-						$(".ui_select01 option[value='${qo.deptId}']").prop("selected", true);
-						</script>
 
 						<div id="box_bottom">
 							<input type="button" value="查询" class="ui_input_btn01" data-page="1"/>
 							<input type="button" value="新增" class="ui_input_btn01 btn_input"
 									data-url="/orderBill/input.do"/>
 
-							<input type="button" value="批量删除" data-url="/orderBill/batchDelete.do"
-								   class="ui_input_btn02 btn_batchDelete">
 						</div>
 
 
@@ -75,26 +94,53 @@
 					<table class="table" cellspacing="0" cellpadding="0" width="100%" align="center" border="0">
 						<tr>
 							<th width="30"><input type="checkbox" id="all" /></th>
-							<th>编号</th>
-							<th>用户名</th>
-							<th>EMAIL</th>
-							<th>年龄</th>
-							<th>所属部门</th>
+							<th>采购单号</th>
+							<th>业务时间</th>
+							<th>供应商</th>
+							<th>总数量</th>
+							<th>总金额</th>
+							<th>录入人</th>
+							<th>审核人</th>
+							<th>状态</th>
 							<th></th>
 						</tr>
 
 						<c:forEach items="${result.data}" var="item" varStatus="num">
 						<tr>
 							<td><input type="checkbox" class="acb" data-eid="${item.id}"/></td>
-							<td>${num.count}</td>
-							<td>${item.name}</td>
-							<td>${item.email}</td>
-							<td>${item.age}</td>
-							<td>${item.dept.name}</td>
+							<td>${item.sn}</td>
 							<td>
-								<a href="/orderBill/input.do?id=${item.id}">编辑</a>
-								<a href="javascript:" class="btn_delete"
-								   data-url="/orderBill/delete.do?id=${item.id}">删除</a>
+								<fmt:formatDate value="${item.vdate}" pattern="yyyy-MM-dd"/>
+							</td>
+							<td>${item.supplier.name}</td>
+							<td>${item.totalNumber}</td>
+							<td>${item.totalAmount}</td>
+							<td>${item.inputUser.name}</td>
+							<td>${item.auditor.name}</td>
+							<td>
+								<c:choose>
+									<c:when test="${item.status == 1}">
+										<span style="color: green">待审核</span>
+									</c:when>
+									<c:when test="${item.status == 2}">
+										<span style="color: red">已审核</span>
+									</c:when>
+								</c:choose>
+							</td>
+
+							<td>
+								<c:choose>
+										<c:when test="${item.status == 1}">
+											<a href="/orderBill/input.do?id=${item.id}">编辑</a>
+											<a href="javascript:"  data-url="/orderBill/delete.do?id=${item.id}"
+											   class="btn_delete">删除</a>
+											<a href="/orderBill/auditor.do?id=${item.id}">审核</a>
+										</c:when>
+										<c:when test="${item.status == 2}">
+											<a href="/orderBill/view.do?id=${item.id}">查看</a>
+										</c:when>
+
+								</c:choose>
 							</td>
 						</tr>
 						</c:forEach>
