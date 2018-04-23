@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <title>Insert title here</title>
+    <script type="text/javascript" src="jquery.js"></script>
+
+
+    <script type="text/javascript">
+        function sum(a, b) {
+            var arr = [1,2, 3,4,5];
+            console.log(typeof arr);  //object
+            console.log(arr instanceof Array);  //true
+
+            //证明arguments不是真正的数组
+            console.log(arguments instanceof Array); //true
+        }
+        sum();
+
+        //利用arguments对象实参的个数来判断
+        function coding() {
+            if(arguments.length == 1){
+                console.log(arguments[0] + "一个人玩耍")
+            }else if(arguments.length == 2){
+                console.log(arguments[0] +  "," + arguments[1] + "一起玩")
+            }else{
+                for (var index in arguments){
+                    console.log("参数" + index + "为" + arguments[index]);
+                }
+            }
+        }
+        // coding("小明", "小芳", "阿瓦达", "afda");
+
+
+        //需求 如果传入的实参是字符串, 就直接输出 ,是数字类型就输出它是个数字
+        function show(a) {
+            if(typeof a == "string" || a instanceof String){
+                console.log(a);
+            }else if(typeof a == "number" || a instanceof Number){
+                console.log("这是个数字");
+            }else {
+                console.log("你好世界" + a);
+            }
+        }
+        // show('qqq');
+
+        // //模拟jquery中的方法
+        // function get(url, data, callback, typr) {
+        //
+        //     var xmlhttp = new XMLHttpRequest();
+        //     xmlhttp.onreadystatechange=function (ev) {
+        //         if(xmlhttp.readyState == 4){
+        //             if(xmlhttp.status == 200){
+        //                 //调用函数
+        //                 callback();
+        //             }
+        //         }
+        //     };
+        //     xmlhttp.open("post", url, true);
+        //     xmlhttp.send(data);
+        // }
+        //
+        // get();
+
+        // 需求:把如下的数据中的所有name替换成text属性
+        var data = [
+                {
+                    "id":1,
+                    "name":"业务模块",
+                    "children":[
+                        {"id":11,"name":"品牌管理"},
+                        {"id":12,"name":"仓库管理"}
+                    ]
+                },
+                {
+                    "id":2,
+                    "name":"系统模块",
+                    "children":[
+                        {"id":11,"name":"员工管理"},
+                        {"id":12,"name":"部门管理"}
+                    ]
+                }
+            ];
+
+            function changeMenus11(menus){
+                for(var i = 0; i < menus.length; i++){
+                    // console.log(menus[i]);  i为索引
+                    var menu = menus[i];
+                    // console.log(menu); //每个元素
+                    //新建text属性
+                    menu.text = menu.name;
+                    //删除name属性
+                    delete menu.name;
+
+                    //递归处理子菜单
+                    if(menu.children){
+                        // changeMenus(menu.children);
+                        //函数体内依赖自身的函数名
+                        arguments.callee(menu.children);
+                    }
+
+                }
+            }
+
+            changeMenus11(data);
+        // console.log(data);
+
+        //回调函数
+        //需求 让你女朋友回到家给你发信息
+        // function goHome(callback) {
+        //     //调用传入的函数
+        //     callback();
+        // }
+        //
+        // function sendMsg() {
+        //     console.log("我们分手吧, 你是个好人");
+        // }
+        //
+        // goHome(sendMsg);
+
+        //匿名函数
+        var goHome = (function () {
+            console.log("再见");
+        });
+        goHome();
+
+        //初始化匿名函数(只执行一次)
+        (function(){
+            console.log("初始化");
+        })();
+
+
+        //对象的克隆
+        var a = {name:"java", age:19};
+        var b = {};
+
+        //把a当作一推属性的集合, for in
+        for (var p in a){
+            console.log(p); //属性名
+            console.log(a[p]); //属性对应的值
+
+            //把a的属性值设置到b的属性上
+            b[p] = a[p];
+        }
+
+
+        //变量
+        var b = [name,123];
+        var name = "lucy";
+        var obj = {};
+        obj.name = "java";
+        obj.showName = function (a) {
+            var name = "js";
+            return this.name;
+        };
+
+        //改变函数执行时候的this指向谁(改变调用者)
+        console.log(obj.showName.call(b));
+
+        //类 直接当做构造器使用
+        function Person(name,age) {
+            this.name = name;
+            this.age = age;
+        }
+        Person.prototype.abc = function () {
+            return this.name;
+        }
+
+        var p = new Person("Bunny", 11);
+
+
+        function Student(sn, name, age) {
+            this.sn = sn;
+            //调用父类构造器(把当前student对象作为调用者)
+            Person.call(this, name,age);
+        }
+        //把Person类的原型上的方法拷贝到Student类的原型上
+        // for(var p in Person.prototype){
+        //     Student.prototype = Person.prototype[p];
+        // }
+
+        //原型链继承(操作原型链的结构,让它拥有Person的原型)
+        Student.prototype = new Person();
+        var s = new Student(01, "bunny", 18);
+        console.log(s);
+        console.log(s.prototype);
+
+        console.log($);
+        $.getJSON("http://localhost/loginTest.do?jsoncallback=?", function (data) {
+            console.log(data);
+        })
+    </script>
+
+
+
+
+</head>
+<body>
+
+</body>
+</html>

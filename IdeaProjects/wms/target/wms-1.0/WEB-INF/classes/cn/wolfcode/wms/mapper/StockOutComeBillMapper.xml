@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.wolfcode.wms.mapper.StockOutComeBillMapper">
+  <resultMap id="BaseResultMap" type="cn.wolfcode.wms.domain.StockOutComeBill">
+    <id column="id" property="id" />
+    <result column="sn" property="sn" />
+    <result column="vdate" property="vdate" />
+    <result column="status" property="status" />
+    <result column="totalAmount" property="totalAmount" />
+    <result column="totalNumber" property="totalNumber" />
+    <result column="auditTime" property="auditTime" />
+    <result column="inputTime" property="inputTime" />
+
+    <!--//录入人-->
+    <association property="inputUser" column="inputUser_id" javaType="employee" columnPrefix="iu_">
+      <id column="id" property="id"/>
+      <result column="name" property="name"/>
+    </association>
+
+    <!--审核人-->
+    <association property="auditor" column="auditorUser_id" columnPrefix="ad_" javaType="employee">
+      <id column="id" property="id"/>
+      <result column="name" property="name"/>
+    </association>
+
+    <!--仓库-->
+    <association property="depot" column="depot_id" columnPrefix="d_" javaType="depot">
+      <id column="id" property="id"/>
+      <result column="name" property="name"/>
+    </association>
+
+    <!--客户-->
+    <association property="client" column="client_id" columnPrefix="c_" javaType="client">
+      <id column="id" property="id"/>
+      <result column="name" property="name"/>
+    </association>
+  </resultMap>
+
+
+  <delete id="deleteByPrimaryKey">
+    delete from stockOutComeBill
+    where id = #{id}
+  </delete>
+
+  <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+    insert into stockOutComeBill (sn, vdate, status, totalAmount, totalNumber,
+      inputTime, inputUser_id, depot_id, client_id)
+    values (#{sn}, #{vdate}, #{status}, #{totalAmount}, #{totalNumber},
+      #{inputTime}, #{inputUser.id}, #{depot.id}, #{client.id})
+  </insert>
+
+  <update id="updateByPrimaryKey">
+    update stockOutComeBill
+    set sn = #{sn},
+      vdate = #{vdate},
+
+      totalAmount = #{totalAmount},
+      totalNumber = #{totalNumber},
+
+      depot_id = #{depot.id},
+      client_id = #{client.id}
+    where id = #{id}
+  </update>
+
+  <!--审核更新-->
+  <update id="updateAuditorById" parameterType="stockOutComeBill">
+      update stockOutComeBill set status = #{status}, auditTime = #{auditTime}, auditor_id = #{auditor.id}
+        where id = #{id}
+  </update>
+
+  <resultMap id="selectOne_map" type="stockOutComeBill">
+    <id column="id" property="id"/>
+    <result column="sn" property="sn"/>
+    <result column="vdate" property="vdate"/>
+    
+    <!--供应商-->
+    <association property="depot" column="depot_id" javaType="depot" columnPrefix="d_">
+      <id column="id" property="id"/>
+      <result column="name" property="name"/>
+    </association>
+
+    <!--客户-->
+    <association property="client" column="client_id" columnPrefix="c_" javaType="client">
+      <id column="id" property="id"/>
+      <result column="name" property="name"/>
+    </association>
+
+    <!--发额外sql查订单明细-->
+    <collection property="items" column="id" ofType="stockInComebillItem"
+                select="cn.wolfcode.wms.mapper.StockOutComebillItemMapper.selectByBillId"/>
+  </resultMap>
+  <select id="selectByPrimaryKey" resultMap="selectOne_map">
+    select bill.id, bill.sn, bill.vdate,
+            d.id d_id, d.name d_name,
+            c.id c_id, c.name c_name
+
+      from stockOutComeBill bill
+      join depot d on d.id = bill.depot_id
+      join client c on c.id = bill.client_id
+     where bill.id = #{id}
+  </select>
+
+
+
+  <sql id="base_where">
+    <where>
+        <if test="beginDate != null">
+          and bill.vdate &gt;= #{beginDate}
+        </if>
+        <if test="endDate != null">
+          and bill.vdate &lt;= #{endDate}
+        </if>
+        <if test="depotId > 0">
+          and bill.depot_id = #{depotId}
+        </if>
+        <if test="clientId > 0">
+          and bill.client_id = #{clientId}
+        </if>
+        <if test="status > 0">
+          and bill.status = #{status}
+        </if>
+    </where>
+  </sql>
+  <select id="queryCount" resultType="int" parameterType="cn.wolfcode.wms.query.StockOutComeBillQueryObject">
+    select count(*) from stockOutComeBill bill
+    <include refid="base_where"/>
+  </select>
+
+  <select id="selectAll" resultMap="BaseResultMap">
+    select bill.id, bill.sn, bill.vdate, bill.status, bill.totalNumber, bill.totalAmount,
+            auditorUser.id ad_id, auditorUser.name ad_name,
+            inputUser.id iu_id, inputUser.name iu_name,
+            d.id d_id, d.name d_name,
+            c.id c_id, c.name c_name
+      from stockOutComeBill bill
+      left join employee auditorUser on auditorUser.id = bill.auditor_id
+      join employee inputUser on inputUser.id = bill.inputUser_id
+      join depot d on d.id = bill.depot_id
+      join client c on c.id = bill.client_id
+      <include refid="base_where"/>
+    limit #{start}, #{pageSize}
+  </select>
+
+  <select id="selectCheckStatusById" resultType="stockOutComeBill">
+    select id, status, totalAmount, totalNumber, depot_id from stockOutComeBill where id = #{id}
+  </select>
+
+</mapper>

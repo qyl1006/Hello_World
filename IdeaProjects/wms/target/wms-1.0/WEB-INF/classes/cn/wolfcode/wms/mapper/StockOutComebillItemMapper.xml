@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.wolfcode.wms.mapper.StockOutComebillItemMapper">
+
+  <!--根据订单ID删除其拥有的明细-->
+  <delete id="deleteByPrimaryKey">
+    delete from stockOutComebillItem
+    where bill_id = #{billId}
+  </delete>
+
+  <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+    insert into stockOutComebillItem (salePrice, number, amount, remark,
+            product_id, bill_id)
+    values (#{salePrice}, #{number}, #{amount}, #{remark}, #{product.id}, #{billId})
+  </insert>
+
+
+  <resultMap id="base_map" type="stockOutComebillItem">
+    <id column="id" property="id"/>
+    <result column="salePrice" property="salePrice"/>
+    <result column="number" property="number"/>
+    <result column="amount" property="amount"/>
+    <result column="remark" property="remark"/>
+
+    <!--商品-->
+    <association property="product" column="product_id" javaType="product" columnPrefix="p_">
+      <id column="id" property="id"/>
+      <result column="name" property="name"/>
+      <result column="brandName" property="brandName"/>
+    </association>
+  </resultMap>
+  <select id="selectByBillId" resultMap="base_map">
+    select item.id, item.salePrice, item.number, item.amount, item.remark,
+            p.id p_id, p.name p_name, p.brandName p_brandName
+
+      from stockOutComebillItem item
+        join product p on p.id = item.product_id
+        where item.bill_id = #{billId}
+  </select>
+  
+</mapper>

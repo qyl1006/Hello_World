@@ -43,4 +43,13 @@ public class LoginController {
     public String main(){
         return "main";
     }
+
+    @RequestMapping("loginTest")
+    @ResponseBody
+    public Object test(){
+        JSONResult json = new JSONResult();
+        json.mark("测试测试");
+
+        return json;
+    }
 }

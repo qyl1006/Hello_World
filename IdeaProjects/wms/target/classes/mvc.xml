@@ -25,6 +25,7 @@
 		<mvc:interceptor>
 			<mvc:mapping path="/**"/>
 			<mvc:exclude-mapping path="/login.do"/>
+			<mvc:exclude-mapping path="/loginTest.do"/>
 			<bean class="cn.wolfcode.wms.interceptor.CheckLoginInterceptor"/>
 		</mvc:interceptor>
 
@@ -32,6 +33,7 @@
 		<mvc:interceptor>
 			<mvc:mapping path="/**"/>
 			<mvc:exclude-mapping path="/login.do"/>
+			<mvc:exclude-mapping path="/loginTest.do"/>
 			<bean class="cn.wolfcode.wms.interceptor.SafetyInterceptor"/>
 		</mvc:interceptor>
 	</mvc:interceptors>

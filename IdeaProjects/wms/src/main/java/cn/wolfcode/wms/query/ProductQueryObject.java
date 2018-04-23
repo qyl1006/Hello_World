@@ -8,7 +8,7 @@ public class ProductQueryObject extends QueryObject {
     //关键字 name/sn
     private String keyword;
     //商品品牌ID
-    private Long brandId = -1L;
+    private Long brandId;
 
     public String getKeyword(){
         return empty2null(keyword);

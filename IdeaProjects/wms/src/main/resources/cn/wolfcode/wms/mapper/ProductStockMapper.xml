@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.wolfcode.wms.mapper.ProductStockMapper">
+  <resultMap id="BaseResultMap" type="cn.wolfcode.wms.domain.ProductStock">
+    <id column="id" property="id" />
+    <result column="price" property="price" />
+    <result column="storeNumber" property="storeNumber" />
+    <result column="amount" property="amount" />
+
+    <!--货品-->
+    <association property="product" column="product_id" columnPrefix="p_" javaType="product">
+      <id column="id" property="id"/>
+      <result column="name" property="name"/>
+      <result column="sn" property="sn"/>
+      <result column="brandName" property="brandName"/>
+    </association>
+
+    <!--仓库-->
+    <association property="depot" column="depot_id" columnPrefix="d_" javaType="depot">
+      <id column="id" property="id"/>
+      <result column="name" property="name"/>
+    </association>
+  </resultMap>
+
+  <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+    insert into productstock (price, storeNumber, amount, product_id, depot_id)
+    values (#{price}, #{storeNumber}, #{amount}, #{product_id}, #{depot_id})
+  </insert>
+
+
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap">
+    select id, price, storeNumber, amount, product_id, depot_id
+    from productstock
+    where id = #{id}
+  </select>
+
+
+
+  <sql id="base_where">
+    <where>
+      <if test="keyword != null">
+        and (p.name like concat('%', #{keyword}, '%') OR
+        p.sn like concat('%', #{keyword}, '%'))
+      </if>
+      <if test="depotId > 0">
+        and d.id = #{depotId}
+      </if>
+      <if test="brandId > 0">
+        and p.brand_id = #{brandId}
+      </if>
+      <if test="warnNum > 0">
+        and ps.storeNumber &lt;= #{warnNum}
+      </if>
+    </where>
+  </sql>
+  <!--分页/高级查询-->
+  <select id="queryCount" resultType="int" >
+    select count(*)
+    from productstock ps
+    join depot d on d.id  = ps.depot_id
+    join product p on p.id = ps.product_id
+    <include refid="base_where"/>
+  </select>
+
+  <select id="queryAll" resultMap="BaseResultMap">
+    select
+      ps.id, ps.price, ps.storeNumber, ps.amount,
+      d.id d_id, d.name d_name,
+      p.id p_id, p.name p_name, p.sn p_sn, p.brandName p_brandName
+    from productstock ps
+    join depot d on d.id  = ps.depot_id
+    join product p on p.id = ps.product_id
+    <include refid="base_where"/>
+    limit #{start}, #{pageSize}
+  </select>
+
+  <select id="selectByProductAndDepot" resultMap="BaseResultMap">
+    select ps.id, ps.price, ps.storeNumber, ps.amount,
+    p.id p_id, p.name p_name, p.brandName p_brandName, p.sn p_sn, p.brand_id,
+    d.id d_id, d.name d_name
+    from productstock ps
+    join product p on ps.product_id = p.id
+    join depot d on ps.depot_id = d.id
+
+    where p.id = #{productId} and d.id = #{depotId}
+  </select>
+
+
+  <update id="updateByPrimaryKey">
+    update productstock
+    set price = #{price},
+    storeNumber = #{storeNumber},
+    amount = #{amount},
+    product_id = #{product.id},
+    depot_id = #{depot.id}
+    where id = #{id}
+  </update>
+</mapper>

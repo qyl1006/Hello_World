@@ -12,12 +12,12 @@
 
 <script type="text/javascript" src="/plugins/artDialog/jquery.artDialog.js?skin=blue"></script>
 	<script type="text/javascript" src="/plugins/My97DatePicker/WdatePicker.js"></script>
-
-
 <script type="text/javascript" src="/js/commonAll.js"></script>
 
 	<script type="text/javascript">
 		$(function () {
+            console.log(123);
+
             //处理开始时间
             $("input[name='beginDate']").click(function () {
                 WdatePicker({
