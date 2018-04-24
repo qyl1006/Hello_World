@@ -67,7 +67,7 @@
 						<div id="box_bottom">
 							<input type="button" value="查询" class="ui_input_btn01 btn_submit"/>
 							<input type="button" value="柱状图" class="left2right chart" data-url="/chart/saleByBar.do">
-							<input type="button" value="饼状图" class="left2right chart" data-url="/chart/saleByBar.do">
+							<input type="button" value="饼状图" class="left2right chart" data-url="/chart/saleByPie.do">
 						</div>
 					</div>
 				</div>

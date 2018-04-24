@@ -27,7 +27,6 @@
 
             $(".ui_input_btn01").click(function () {
 
-			    $(".selected_role option").prop("selected", true);
 			    //手动提交
                 $("#editForm").submit();
             });

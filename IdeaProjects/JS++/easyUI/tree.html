@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type"content="text/html;charset=utf-8"/>
+    <!--//当前页面使用的easyui的主题-->
+    <link rel="stylesheet" type="text/css" href="../jquery-easyui/themes/default/easyui.css">
+    <!--easyui的图标样式-->
+    <link rel="stylesheet" type="text/css" href="../jquery-easyui/themes/icon.css">
+    <!--jquery核心库-->
+    <script type="text/javascript" src="../jquery-easyui/jquery.min.js"></script>
+    <!--easyui核心库-->
+    <script type="text/javascript" src="../jquery-easyui/jquery.easyui.min.js"></script>
+
+    <script>
+        $(function () {
+            $("#myTree").tree({
+                url:"tree.json",
+                animate:true,
+                checkbox:true,
+                lines:true,
+                // formatter:function(node){
+                //     return node.name;
+                // }
+
+                onDblClick:function (node) {
+                    $("#myTree").tree("toggle", node.target)
+                }
+            })
+
+
+        });
+    </script>
+
+    <title>easyUI</title>
+</head>
+<body>
+
+
+<div id="myTree"></div>
+
+</body>
+</html>

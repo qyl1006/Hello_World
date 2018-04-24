@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -87,5 +88,44 @@ public class OrderChartController {
         model.addAttribute("y", JSONUtil.toJSONString(y));
 
         return "chart/saleByBar";
+    }
+
+    @RequestMapping("saleByPie")
+    public String saleByPie(@ModelAttribute("qo") OrderSaleQueryObject qo, Model model){
+
+        List<Object> x = new ArrayList<>();
+        List<Map<Object,Object>> list = new ArrayList<>();
+
+        Map<Object, Object> mapList = new HashMap();
+
+
+        List<Map<String, Object>> maps = orderChartService.queryOrderSale(qo);
+        for (Map<String, Object> map : maps) {
+
+//            Map<Object, Object> mapList = new HashMap<>();
+            //取出当前行中的groupType和totalAmount两个值对应存入x/y
+//            x.add(map.get("groupType"));
+//            mapList.put( map.get("amount"), map.get("groupType"));
+//
+//            list.add(mapList);
+      }
+
+
+        /**
+         * [
+         {value:335, name:'admin'},
+         {value:310, name:'李四明'},
+         ]
+         */
+            mapList.put(335, "admin");
+            list.add(mapList);
+
+
+        //转换成json存入模式对象中
+        model.addAttribute("groupType", MyDictionary.SALE_MAP.get(qo.getGroupType()));
+        model.addAttribute("x", JSONUtil.toJSONString(x));
+        model.addAttribute("list", JSONUtil.toJSONString(list));
+
+        return "chart/saleByPie";
     }
 }

@@ -61,10 +61,6 @@
 
                             });
 
-                            // 页面跳转
-                            $("#increase").click(function () {
-                                location.href = $(this).data("url");
-                            });
                         });
 
 

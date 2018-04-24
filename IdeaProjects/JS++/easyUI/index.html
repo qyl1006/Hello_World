@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--//当前页面使用的easyui的主题-->
+    <link rel="stylesheet" type="text/css" href="../jquery-easyui/themes/default/easyui.css">
+    <!--easyui的图标样式-->
+    <link rel="stylesheet" type="text/css" href="../jquery-easyui/themes/icon.css">
+    <!--jquery核心库-->
+    <script type="text/javascript" src="../jquery-easyui/jquery.min.js"></script>
+    <!--easyui核心库-->
+    <script type="text/javascript" src="../jquery-easyui/jquery.easyui.min.js"></script>
+
+    <script>
+        $(function () {
+            var index = 0;
+
+            $("#myTabs").tabs({
+                width:500,
+                height:250,
+                tools:[{
+                    iconCls:'icon-add',
+                    handler:function () {
+                        //创建选项卡
+                        $("#myTabs").tabs("add",{
+                            title:'tab' + index++,
+                            content:'content',
+                            closable:true
+                        })
+
+                    }
+
+                },{
+                    iconCls:'icon-remove',
+                    handler:function () {
+                        //获取选中的那个选项卡
+                        var tab = $("#myTabs").tabs("getSelected");
+
+                        //获取选项卡的索引
+                        var index = $("#myTabs").tabs('getTabIndex', tab);
+
+                        //关闭该选项卡
+                       $("#myTabs").tabs('close', index);
+
+
+                    }
+
+                }]
+
+
+
+
+
+
+            })
+        });
+    </script>
+
+    <title>Title</title>
+</head>
+<body>
+
+<div id="myTabs"></div>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type"content="text/html;charset=utf-8"/>
+    <!--//当前页面使用的easyui的主题-->
+    <link rel="stylesheet" type="text/css" href="../jquery-easyui/themes/default/easyui.css">
+    <!--easyui的图标样式-->
+    <link rel="stylesheet" type="text/css" href="../jquery-easyui/themes/icon.css">
+    <!--jquery核心库-->
+    <script type="text/javascript" src="../jquery-easyui/jquery.min.js"></script>
+    <!--easyui核心库-->
+    <script type="text/javascript" src="../jquery-easyui/jquery.easyui.min.js"></script>
+
+    <script>
+        $(function () {
+            console.log(jQuery.fn.panel.defaults);
+            jQuery.fn.panel.defaults.title="金三胖子";
+
+
+            //把下面的Div标签变成easyui组件
+            $("#myPanel").panel({
+                // title:"金三胖",
+                height: 300,
+                width: 300,
+                border: true,
+                fit: false,
+                collapsible: true,
+                minimizable: true,
+                maximizable : true,
+                content : "凉凉..ing",
+                // href : "http://localhost/loginTest.do",
+                loadingMessage : "努力加载Ing",
+                cache : true,
+                // queryParams: {name:123},
+
+                //事件触发
+                onExpand:function () {
+                    console.log("展开面板.....");
+                },
+                onCollapse:function () {
+                    console.log("关闭面板");
+                }
+
+            });
+            //修改面板标题
+            $("#myPanel").panel("setTitle", "方法修改标题")
+
+
+
+        });
+    </script>
+
+    <title>easyUI</title>
+</head>
+<body>
+<!--第一种方式 直接在页面上添加组件-->
+<!--<div class="easyui-panel" title="面板标题" height="300" iconCls="icon-help"></div>-->
+<!--<div class="easyui-panel" data-options="title:'面板标题',height:300,iconCls:'icon-help'"></div>-->
+
+<!--第二种方式 使用js创建组件-->
+<div height="600">
+    <div height="300"></div>
+    <div id="myPanel"></div>
+</div>
+</body>
+</html>
