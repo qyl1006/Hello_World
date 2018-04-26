@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type"content="text/html;charset=utf-8"/>
+    <!--//当前页面使用的easyui的主题-->
+    <link rel="stylesheet" type="text/css" href="../jquery-easyui/themes/bootstrap/easyui.css">
+    <!--easyui的图标样式-->
+    <link rel="stylesheet" type="text/css" href="../jquery-easyui/themes/icon.css">
+    <!--jquery核心库-->
+    <script type="text/javascript" src="../jquery-easyui/jquery.min.js"></script>
+    <!--easyui核心库-->
+    <script type="text/javascript" src="../jquery-easyui/jquery.easyui.min.js"></script>
+    <!--国际化引入中文-->
+    <script type="text/javascript" src="../jquery-easyui/locale/easyui-lang-zh_CN.js"></script>
+
+     <script type="text/javascript" src="employee.js"></script>
+
+    <title>employee</title>
+</head>
+<body>
+
+
+<table id="myDatagrid" fit="true"></table>
+<div id="toolbar_thns">
+    <a class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="add()">新增</a>
+    <a class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="edit()">编辑</a>
+    <a class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="del()">删除</a>
+
+    <input id="d1" class="easyui-datebox">
+    <input id="d2" class="easyui-datebox">
+    <input id="keword">
+
+</div>
+
+<div id="form_thns">
+    <a class="easyui-linkbutton" iconCls="icon-save" plain="true" onclick="save()">保存</a>
+    <a class="easyui-linkbutton" iconCls="icon-cancel" plain="true" onclick="cancel()">取消</a>
+</div>
+
+<!--对话框 弹出框-->
+<div id="myDialog">
+    <form id="myForm" method="post">
+        <input type="hidden" name="id">
+        <table  align="center" style="margin-top: 15px">
+            <tr>
+                <td>姓名</td>
+                <td><input name="name" class="easyui-textbox" prompt="请输入姓名"></td>
+            </tr>
+            <tr>
+                <td>邮箱</td>
+                <td><input name="email" class="easyui-validatebox" validType="email" ></td>
+            </tr>
+            <tr>
+                <td>部门</td>
+                <!--<td><input name="dept" class="easyui-textbox" ></td>-->
+               <td>
+                   <input id="cc" class="easyui-combobox" name="dept.id"
+                          data-options="valueField:'id',textField:'text',url:'dept.json',
+                           valueFieId:'id',textField:'name',panelHeight:'auto',limitToList:'true'" />
+               </td>
+            </tr>
+            <tr>
+                <td>年龄</td>
+                <td><input name="age" class="easyui-numberbox"
+                    data-options="min:0,max:120"></td>
+            </tr>
+            <tr>
+                <td>入职时间</td>
+                <td><input name="inputTime" class="easyui-datetimebox" ></td>
+            </tr>
+            <tr>
+                <td>状态</td>
+                <td>
+                    <input class="easyui-combobox" name="state"
+                           data-options="valueField:'id',textField:'text',data:[{text:'在职',id:'1'},
+                           {text:'离职',id:'0'}],textField:'text',panelHeight:'auto'" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

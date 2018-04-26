@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type"content="text/html;charset=utf-8"/>
+    <!--//当前页面使用的easyui的主题-->
+    <link rel="stylesheet" type="text/css" href="../jquery-easyui/themes/default/easyui.css">
+    <!--easyui的图标样式-->
+    <link rel="stylesheet" type="text/css" href="../jquery-easyui/themes/icon.css">
+    <!--jquery核心库-->
+    <script type="text/javascript" src="../jquery-easyui/jquery.min.js"></script>
+    <!--easyui核心库-->
+    <script type="text/javascript" src="../jquery-easyui/jquery.easyui.min.js"></script>
+    <!--引入中文-->
+    <script type="text/javascript" src="../jquery-easyui/locale/easyui-lang-zh_CN.js"></script>
+
+    <script>
+        $(function () {
+            $("#myDatagrid").datagrid({
+                width:800,
+                heigt:500,
+                title:"员工管理",
+                fitColumns:true,
+                url:"emp_datagrid.json",
+                columns:[ [
+                    {field:'id',checkbox:true},
+                    {field:'name',title:'姓名',width:80},
+                    {field:'email',title:'邮箱',width:80},
+                    {field:'dept',title:'部门名称',width:80, formatter:function (value,row,index) {
+                            return value?value.name:"";
+                        }},
+                    {field:'dept1',title:'部门ID',width:80, formatter:function (value,row,index) {
+                            return row.dept?row.dept.id:'';
+                        }},
+
+                    {field:'age',title:'年龄',width:80,sortable:true,styler: function(value,row,index){
+                            if (value < 20){
+                                return 'background-color:#ffee00;color:red;';
+                            }
+                        }},
+                    {field:'inputTime',title:'录入时间',width:80},
+                    {field:'tel',title:'电话',width:80},
+                    {field:'state',title:'状态',width:80,formatter:function (value, row,index) {
+                            return value?"在职":"<font color='red'>离职</font>";
+                        }},
+                ]],
+                toolbar:'#toolbar_thns',
+                pagination:true,
+
+                rowStyler: function (index, row) {
+                    if(row.age>18){
+                        return 'background-color:#6293BB;color:#fff;';
+
+                    }
+                },
+
+            })
+
+        });
+    </script>
+
+    <title>easyUI</title>
+</head>
+<body>
+
+
+<table id="myDatagrid"></table>
+<div id="toolbar_thns">
+    <a class="easyui-linkbutton" iconCls="icon-add" plain="true">新增</a>
+    <a class="easyui-linkbutton" iconCls="icon-edit" plain="true">编辑</a>
+</div>
+</body>
+</html>
