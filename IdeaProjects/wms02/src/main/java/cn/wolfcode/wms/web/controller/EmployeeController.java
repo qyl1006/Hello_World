@@ -10,6 +10,7 @@ import cn.wolfcode.wms.service.IDepartmentService;
 import cn.wolfcode.wms.service.IEmployeeService;
 import cn.wolfcode.wms.service.IRoleService;
 import cn.wolfcode.wms.util.JSONResult;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,6 +29,7 @@ public class EmployeeController {
     private IRoleService roleService;
 
 
+    @RequiresPermissions({"employee:list"})
     @RequestMapping("list")
     public String list(@ModelAttribute("qo") EmployeeQueryObject qo, Model model){
         PageResult result = employeeService.queryAll(qo);
@@ -38,6 +40,7 @@ public class EmployeeController {
         return "employee/list";
     }
 
+//    @RequiresPermissions({"employee:input"})
     @RequestMapping("input")
     public String input(Long id, Model model){
         if (id != null) {

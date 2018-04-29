@@ -24,7 +24,7 @@
 </style>
 </head>
 <body>
-	<form id="searchForm" action="/stockOutcomeBill/list.do" method="post">
+	<form id="searchForm" action="/stockOutComeBill/list.do" method="post">
 		<div id="container">
 			<div class="ui_content">
 				<div class="ui_text_indent">
@@ -112,7 +112,7 @@
 						<div id="box_bottom">
 							<input type="button" value="查询" class="ui_input_btn02 query"/>
 							<input type="button" value="新增" class="ui_input_btn02 custom_button" id="increase"
-									data-url="/stockOutcomeBill/input.do"/>
+									data-url="/stockOutComeBill/input.do"/>
 
 						</div>
 					</div>
@@ -169,14 +169,14 @@
 								<td>
 									<c:choose>
 										<c:when test="${item.status == 1}">
-											<a href="/stockOutcomeBill/input.do?id=${item.id}">编辑</a>
-											<a href="javascript:"  data-url="/stockOutcomeBill/delete.do?id=${item.id}"
+											<a href="/stockOutComeBill/input.do?id=${item.id}">编辑</a>
+											<a href="javascript:"  data-url="/stockOutComeBill/delete.do?id=${item.id}"
 											   class="btn_delete">删除</a>
-											<a href="javascript:" data-url="/stockOutcomeBill/auditor.do?id=${item.id}"
+											<a href="javascript:" data-url="/stockOutComeBill/auditor.do?id=${item.id}"
 												class="btn_audit">审核</a>
 										</c:when>
 										<c:when test="${item.status == 2}">
-											<a href="/stockOutcomeBill/view.do?id=${item.id}" >查看</a>
+											<a href="/stockOutComeBill/view.do?id=${item.id}" >查看</a>
 										</c:when>
 									</c:choose>
 

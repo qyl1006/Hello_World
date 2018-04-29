@@ -93,4 +93,8 @@
     select id, name, email, age, admin from employee
         where name=#{username} and password=#{password}
   </select>
+
+  <select id="selectByUsername" resultType="employee">
+    select  id, name, password, email, age, admin from employee where name = #{username}
+  </select>
 </mapper>

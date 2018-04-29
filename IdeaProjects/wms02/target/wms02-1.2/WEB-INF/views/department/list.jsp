@@ -17,6 +17,9 @@
 </style>
 </head>
 <body>
+
+
+
 	<form id="searchForm" action="/department/list.do" method="post">
 		<div id="container">
 			<div class="ui_content">
@@ -60,6 +63,8 @@
 									<a href="/department/input.do?id=${item.id}">编辑</a>
 									<a href="javascript:"  data-url="/department/delete.do?id=${item.id}"
 										class="btn_delete">删除</a>
+
+
 								</td>
 							</tr>
 						</c:forEach	>

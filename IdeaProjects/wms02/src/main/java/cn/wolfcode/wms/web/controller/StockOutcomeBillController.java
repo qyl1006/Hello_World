@@ -16,10 +16,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@RequestMapping("stockOutcomeBill")
+@RequestMapping("stockOutComeBill")
 public class StockOutcomeBillController {
     @Autowired
-    private IStockOutcomeBillService stockOutcomeBillService;
+    private IStockOutcomeBillService stockOutComeBillService;
     @Autowired
     private IDepotService depotService;
     @Autowired
@@ -29,20 +29,20 @@ public class StockOutcomeBillController {
 
     @RequestMapping("list")
     public String list(@ModelAttribute("qo") StockOutcomeBillQueryObject qo, Model model){
-        PageResult result = stockOutcomeBillService.queryAll(qo);
+        PageResult result = stockOutComeBillService.queryAll(qo);
         model.addAttribute("result", result);
 
         //供应商
         model.addAttribute("depots", depotService.listAll());
         //客户
         model.addAttribute("clients", clientService.listAll());
-        return "stockOutcomeBill/list";
+        return "stockOutComeBill/list";
     }
 
     @RequestMapping("input")
     public String input(Long id, Model model){
         if (id != null) {
-            StockOutcomeBill entity = stockOutcomeBillService.getById(id);
+            StockOutcomeBill entity = stockOutComeBillService.getById(id);
             model.addAttribute("entity",entity);
         }
 
@@ -50,13 +50,13 @@ public class StockOutcomeBillController {
         model.addAttribute("depots", depotService.listAll());
         //客户
         model.addAttribute("clients", clientService.listAll());
-        return "stockOutcomeBill/input";
+        return "stockOutComeBill/input";
     }
 
     @RequestMapping("view")
     public String view(Long id, Model model){
         if (id != null) {
-            StockOutcomeBill entity = stockOutcomeBillService.getById(id);
+            StockOutcomeBill entity = stockOutComeBillService.getById(id);
             model.addAttribute("entity",entity);
         }
 
@@ -65,14 +65,14 @@ public class StockOutcomeBillController {
 
         //客户
         model.addAttribute("clients", clientService.listAll());
-        return "stockOutcomeBill/view";
+        return "stockOutComeBill/view";
     }
 
     @RequestMapping("saveOrUpdate")
     public String saveOrUpdate(StockOutcomeBill entity){
-        stockOutcomeBillService.insertOrUpdate(entity);
+        stockOutComeBillService.insertOrUpdate(entity);
 
-        return "redirect:/stockOutcomeBill/list.do";
+        return "redirect:/stockOutComeBill/list.do";
     }
 
     @RequestMapping("auditor")
@@ -82,7 +82,7 @@ public class StockOutcomeBillController {
         if (id != null) {
 
             try {
-                stockOutcomeBillService.updataAuditorById(id);
+                stockOutComeBillService.updataAuditorById(id);
             } catch (Exception e) {
                 e.printStackTrace();
                 json.mark(e.getMessage());
@@ -96,7 +96,7 @@ public class StockOutcomeBillController {
     @ResponseBody
     public Object delete(Long id){
         if (id != null) {
-            stockOutcomeBillService.deleteById(id);
+            stockOutComeBillService.deleteById(id);
         }
 
         return new JSONResult();

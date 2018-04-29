@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+            http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context.xsd
+
+            http://www.springframework.org/schema/aop
+            http://www.springframework.org/schema/aop/spring-aop.xsd ">
+
+    <!--定义凭证匹配器-->
+    <bean id="credentialsMatcher" class="org.apache.shiro.authc.credential.HashedCredentialsMatcher">
+        <!--散列算法-->
+        <property name="hashAlgorithmName" value="MD5"/>
+        <!--散列次数-->
+        <property name="hashIterations" value="1"/>
+    </bean>
+
+    <!--自定义realm-->
+    <bean id="myRealm" class="cn.wolfcode.wms.realm.MyRealm">
+        <property name="credentialsMatcher" ref="credentialsMatcher"/>
+    </bean>
+
+    <!--安全管理器-->
+    <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+        <property name="realms" ref="myRealm"/>
+    </bean>
+
+    <!--shiro过滤器(生命周期已经交给spring)-->
+    <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+        <property name="securityManager" ref="securityManager"/>
+
+        <!--设置登陆的表单地址-->
+        <property name="loginUrl" value="/login.do"/>
+
+        <!--配置登陆成功后访问的页面-->
+        <!--<property name="successUrl" value="/main.do"/>-->
+
+        <!--配置url路径可以是匿名访问  或 认证后访问 或 根据权限 角色来-->
+        <property name="filterChainDefinitions">
+            <value>
+                /js/**=anon
+                /images/**=anon
+                /style/**=anon
+                /update/**=anon
+
+                /login.jsp=anon
+                /test.jsp=anon
+                /logout.do=logout
+                /favicon.ico/**=anon
+                /**=authc
+            </value>
+        </property>
+    </bean>
+
+    <!-- 开启aop，对类代理 -->
+    <aop:config proxy-target-class="true"></aop:config>
+    <!-- 开启shiro注解支持 -->
+    <bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
+        <property name="securityManager" ref="securityManager" />
+    </bean>
+</beans>

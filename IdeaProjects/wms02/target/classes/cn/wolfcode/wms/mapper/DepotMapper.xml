@@ -43,4 +43,6 @@
     <select id="listAll" resultType="depot">
       select id, name from depot
     </select>
+
+
 </mapper>

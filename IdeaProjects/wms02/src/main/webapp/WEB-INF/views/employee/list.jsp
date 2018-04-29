@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="shiro" uri="http://shiro.apache.org/tags" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -76,9 +77,13 @@
 								<td>${item.dept.name}</td>
 								<%--<td>${item.dept}</td>--%>
 								<td>
-									<a href="/employee/input.do?id=${item.id}">编辑</a>
-									<a href="javascript:"  data-url="/employee/delete.do?id=${item.id}"
-										class="btn_delete">删除</a>
+									<shiro:hasPermission name="dept:input">
+										<a href="/employee/input.do?id=${item.id}">编辑</a>
+									</shiro:hasPermission>
+										<a href="javascript:"  data-url="/employee/delete.do?id=${item.id}"
+												class="btn_delete">删除</a>
+
+
 								</td>
 							</tr>
 						</c:forEach	>

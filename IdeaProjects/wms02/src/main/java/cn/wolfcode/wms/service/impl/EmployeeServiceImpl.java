@@ -105,4 +105,9 @@ public class EmployeeServiceImpl implements IEmployeeService {
 
 
     }
+
+    @Override
+    public Employee selectByUsername(String username) {
+        return employeeMapper.selectByUsername(username);
+    }
 }

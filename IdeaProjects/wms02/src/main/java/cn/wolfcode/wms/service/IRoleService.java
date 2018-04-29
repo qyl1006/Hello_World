@@ -16,4 +16,11 @@ public interface IRoleService {
     PageResult queryAll(QueryObject qo);
 
     List<Role> listAll();
+
+    /**
+     * 根据Employee的ID查询Role
+     * @param EmployeeId
+     * @return
+     */
+    List<String> selectSnByEmployeeId(Long EmployeeId);
 }

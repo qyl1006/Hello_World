@@ -32,4 +32,7 @@ public interface RoleMapper {
 
     void insertRelationByMenu(@Param("roleId") Long roleId,
                               @Param("menuId") Long menuId);
+
+    //根据Employee的ID查询Role
+    List<String> selectSnByEmployeeId(Long EmployeeId);
 }

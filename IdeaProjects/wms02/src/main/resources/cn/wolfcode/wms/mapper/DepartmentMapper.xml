@@ -43,4 +43,8 @@
       select id, name, sn from department
   </select>
 
+  <select id="selectByEmployeeId" resultType="department">
+    select id, name, sn from department where id = #{deptId}
+  </select>
+
 </mapper>

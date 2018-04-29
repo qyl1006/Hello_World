@@ -31,4 +31,11 @@ public interface EmployeeMapper {
 
     //批量删除
     void batchDelete(Long[] ids);
+
+    /**
+     * 根据用户名查询
+     * @param username
+     * @return
+     */
+    Employee selectByUsername(String username);
 }

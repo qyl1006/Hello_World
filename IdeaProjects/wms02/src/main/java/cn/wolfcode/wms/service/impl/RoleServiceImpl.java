@@ -76,4 +76,14 @@ public class RoleServiceImpl implements IRoleService {
     public List<Role> listAll() {
         return roleMapper.selectAll();
     }
+
+    /**
+     * 根据Employee的ID查询Role
+     * @param EmployeeId
+     * @return
+     */
+    @Override
+    public List<String> selectSnByEmployeeId(Long EmployeeId) {
+        return roleMapper.selectSnByEmployeeId(EmployeeId);
+    }
 }

@@ -38,7 +38,7 @@ $(function () {
             }
         },
 
-    })
+    });
 
     // 弹窗
     $("#myDialog").dialog({
@@ -53,7 +53,7 @@ $(function () {
         }
     });
 
-    //搜索
+    //高级查询
     $("#keword").searchbox({
 
         searcher:function (value, name) {

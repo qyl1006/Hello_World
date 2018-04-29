@@ -17,4 +17,9 @@ public interface IPermissionService {
     List<Permission> listAll();
 
     List<String> selectExpressionByEmployeeId(Long id);
+
+
+
+
+
 }

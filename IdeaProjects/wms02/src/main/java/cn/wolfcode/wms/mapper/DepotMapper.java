@@ -22,4 +22,7 @@ public interface DepotMapper {
     List<Depot> queryAll(QueryObject qo);
 
     List<Depot> listAll();
+
+    //通过员工ID查部门
+
 }

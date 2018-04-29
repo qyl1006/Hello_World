@@ -13,18 +13,18 @@
 <script type="text/javascript" src="/plugins/jQuery-form/jQueryForm.js"></script>
 
 	<script type="text/javascript">
-		$(function () {
-			$("#login_sub").click(function () {
-                console.log(this);
-                $("#loginForm").ajaxForm(function (data) {
-                    if(data.success){
-                        location.href = "/main.do";
-                    }else{
-                        $("#login_err").html(data.msg);
-                    }
-                })
-            });
-        });
+        // $(function () {
+			// $("#login_sub").click(function () {
+        //         console.log(this);
+        //         $("#loginForm").ajaxForm(function (data) {
+        //             if(data.success){
+        //                 location.href = "/main.do";
+        //             }else{
+        //                 $("#login_err").html(data.msg);
+        //             }
+        //         })
+        //     });
+        // });
 	</script>
 
 </head>
@@ -35,7 +35,7 @@
 				<div id="login_form">
 					<form id="loginForm" action="/login.do" method="post">
 						<div id="login_tip">
-							<span id="login_err" class="sty_txt2"></span>
+							<span id="login_err" class="sty_txt2">${errorMsg}</span>
 						</div>
 						<div>
 							用户名：<input type="text" name="username" class="username" id="name"

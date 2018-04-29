@@ -7,11 +7,13 @@ import cn.wolfcode.wms.query.QueryObject;
 import cn.wolfcode.wms.service.IPermissionService;
 import cn.wolfcode.wms.util.PermissionUtil;
 import cn.wolfcode.wms.util.RequirePermission;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 
+import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
 import java.util.Collection;
 import java.util.List;
@@ -33,20 +35,29 @@ public class PermissionServiceImpl implements IPermissionService {
         for (Object ctr : ctrs) {
             Method[] ms = ctr.getClass().getDeclaredMethods();
             for (Method m : ms) {
-                //生产 方法的权限表达式
-                String exp = PermissionUtil.builExpression(m);
+//                //生产 方法的权限表达式
+//                String exp = PermissionUtil.builExpression(m);
+
 
                 //判断方法是否有权限
-                RequirePermission anno = m.getAnnotation(RequirePermission.class);
+                //anno取出来的为null 有问题需要解决
+                RequiresPermissions anno = m.getAnnotation(RequiresPermissions.class);
+                if (anno != null) {
+                    String[] pemissionss = anno.value();
+                    for (String pemission : pemissionss) {
+                        if(!exps.contains(pemission)){
+                            Permission p = new Permission();
+                            p.setExpression(pemission);
 
-                if(anno != null && !exps.contains(exp)){
-                    Permission p = new Permission();
-                    p.setName(anno.value());
-                    p.setExpression(exp);
+                            System.out.println(pemission);
+                            //保存
+                            permissionMapper.insert(p);
+                        }
+                    }
 
-                    //保存
-                    permissionMapper.insert(p);
                 }
+
+
             }
         }
 

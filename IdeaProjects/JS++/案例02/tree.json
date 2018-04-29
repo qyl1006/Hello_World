@@ -1,0 +1,35 @@
+[{
+	"id":1,
+	"text":"系统管理",
+	"state":"closed",
+	"children":[{
+		"id":11,
+		"text":"员工管理",
+		"url":"employee.html"
+	},{
+		"id":12,
+		"text":"部门管理",
+		"url":"department.html"
+	},{
+		"id":13,
+		"text":"角色管理",
+		"url":"role.html"
+	}]
+},{
+	"id": 1,
+	"text": "Node 1",
+	"state": "closed",
+	"children": [{
+		"id": 11,
+		"text": "Node 11"
+	},{
+		"id": 12,
+		"text": "Node 12"
+	}]
+},{
+	"id": 2,
+	"text": "Node 2",
+	"state": "closed"
+}
+
+]

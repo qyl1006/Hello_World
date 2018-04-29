@@ -9,6 +9,8 @@
         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 	<import resource="classpath:applicationContext.xml"/>
+	<!--导入shiro配置文件-->
+	<import resource="classpath:shiro.xml"/>
 
 	<!--MVC的注解驱动-->
 	<mvc:annotation-driven/>
@@ -20,21 +22,21 @@
 	</bean>
 
 
-	<mvc:interceptors>
-		<!--登陆拦截器-->
-		<mvc:interceptor>
-			<mvc:mapping path="/**"/>
-			<mvc:exclude-mapping path="/login.do"/>
-			<bean class="cn.wolfcode.wms.interceptor.CheckLoginInterceptor"/>
-		</mvc:interceptor>
+	<!--<mvc:interceptors>-->
+		<!--&lt;!&ndash;登陆拦截器&ndash;&gt;-->
+		<!--<mvc:interceptor>-->
+			<!--<mvc:mapping path="/**"/>-->
+			<!--<mvc:exclude-mapping path="/login.do"/>-->
+			<!--<bean class="cn.wolfcode.wms.interceptor.CheckLoginInterceptor"/>-->
+		<!--</mvc:interceptor>-->
 
-		<!--安全拦截器-->
-		<mvc:interceptor>
-			<mvc:mapping path="/**"/>
-			<mvc:exclude-mapping path="/login.do"/>
-			<bean class="cn.wolfcode.wms.interceptor.SafetyInterceptor"/>
-		</mvc:interceptor>
-	</mvc:interceptors>
+		<!--&lt;!&ndash;安全拦截器&ndash;&gt;-->
+		<!--<mvc:interceptor>-->
+			<!--<mvc:mapping path="/**"/>-->
+			<!--<mvc:exclude-mapping path="/login.do"/>-->
+			<!--<bean class="cn.wolfcode.wms.interceptor.SafetyInterceptor"/>-->
+		<!--</mvc:interceptor>-->
+	<!--</mvc:interceptors>-->
 
 	<!--<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">-->
 		<!--&lt;!&ndash; 定义默认的异常处理页面，当该异常类型的注册时使用 &ndash;&gt;-->

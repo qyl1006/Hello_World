@@ -17,4 +17,6 @@ public interface IEmployeeService {
     void login(String username, String password);
 
     void batchDelete(Long[] ids);
+
+    Employee selectByUsername(String username);
 }

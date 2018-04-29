@@ -8,6 +8,7 @@ import cn.wolfcode.wms.query.QueryObject;
 import cn.wolfcode.wms.service.ISystemmenuService;
 import cn.wolfcode.wms.util.JSONResult;
 import cn.wolfcode.wms.util.UserContext;
+import org.apache.shiro.SecurityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.security.auth.Subject;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -79,7 +81,10 @@ public class SystemmenuController {
     public Object getMenusBySn(String menuSn){
 
         //取出当前登陆用户
-        Employee emp = UserContext.getCurrentUser();
+//        Employee emp = UserContext.getCurrentUser();
+
+        //获取身份信息
+        Employee emp = (Employee) SecurityUtils.getSubject().getPrincipal();
 
         if(emp.isAdmin()){
             //所有菜单

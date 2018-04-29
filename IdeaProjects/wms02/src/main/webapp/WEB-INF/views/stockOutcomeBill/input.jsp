@@ -130,7 +130,7 @@
 
             $("#editForm").ajaxForm(function (data) {
                 showDialog("保存成功!",function () {
-					location.href="/stockOutcomeBill/list.do";
+					location.href="/stockOutComeBill/list.do";
                 });
             });
 
@@ -176,7 +176,7 @@
 
 </head>
 <body>
-<form id="editForm" action="/stockOutcomeBill/saveOrUpdate.do" method="post">
+<form id="editForm" action="/stockOutComeBill/saveOrUpdate.do" method="post">
 	<input type="hidden" name="id" value="${entity.id}">
 	<div id="container">
 		<div id="nav_links">
