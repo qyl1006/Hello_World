@@ -5,6 +5,7 @@ import cn.wolfcode.wms.domain.Role;
 import cn.wolfcode.wms.service.IEmployeeService;
 import cn.wolfcode.wms.service.IPermissionService;
 import cn.wolfcode.wms.service.IRoleService;
+import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
@@ -13,6 +14,7 @@ import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
+import org.apache.shiro.subject.Subject;
 import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -83,4 +85,8 @@ public class MyRealm extends AuthorizingRealm {
         return info;
 
     }
+
+
+
+
 }

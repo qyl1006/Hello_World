@@ -10,21 +10,9 @@
 <title>叩丁狼WMS（演示版）</title>
 <link href="/style/login_css.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="/js/jquery/jquery.js"></script>
-<script type="text/javascript" src="/plugins/jQuery-form/jQueryForm.js"></script>
 
 	<script type="text/javascript">
-        // $(function () {
-			// $("#login_sub").click(function () {
-        //         console.log(this);
-        //         $("#loginForm").ajaxForm(function (data) {
-        //             if(data.success){
-        //                 location.href = "/main.do";
-        //             }else{
-        //                 $("#login_err").html(data.msg);
-        //             }
-        //         })
-        //     });
-        // });
+
 	</script>
 
 </head>
